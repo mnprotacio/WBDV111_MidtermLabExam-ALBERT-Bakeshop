@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>albertsbakeshop.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="alberts-bakeshop.png">
+  <link rel="stylesheet" href="test2.css" />
+</head>
+
+<!--HEROBUTTON FORM-->
+<div class="popup-overlay" id="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+
+    <h2>Custom Cake</h2>
+
+    <div class="popup-form">
+
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email">
+      <div class="phone-group">
+        <select class="country-code">
+          <option value="+63">PH +63</option>
+          <option value="+1">US +1</option>
+        </select>
+        <input type="text" placeholder="Phone Number">
+      </div>
+      <input type="text" placeholder="Home Address">
+
+      <label>Type of Celebration</label>
+      <select>
+        <option>Birthday</option>
+        <option>Wedding</option>
+        <option>Anniversary</option>
+        <option>Other</option>
+      </select>
+
+      <label>Date of Event</label>
+      <div class="date-group">
+        <input type="text" placeholder="MM">
+        <input type="text" placeholder="DD">
+        <input type="text" placeholder="YYYY">
+      </div>
+      <label>Additional Details</label>
+      <textarea placeholder="What would you like to include?"></textarea>
+      <button class="submit-btn">Submit</button>
+    </div>
+  </div>
+</div>
+
+<body>
+
+  <nav class="nav">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" />
+        <p class="nav-logo-text">Albert's Bakeshop</p>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </nav>
+
+  <section class="herosection" id="home">
+    <div class="hero-slides">
+      <div class="slide active" style="background-image: url('cake-hero.png')"></div>
+      <div class="slide" style="background-image: url('cupcake-hero.jpg')"></div>
+    </div>
+    <div class="hero-content">
+      <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" class="hero-logo">
+      <h1 class="hero-title">Albert's Bakeshop</h1>
+      <p class="hero-desc">"Crafted to Taste, Designed to Impress"</p>
+      <button class="custom-btn" onclick="openPopup()">Custom Cake</button>
+    </div>
+  </section>
+
+  <section id="menu" class="menu">
+    <button class="slider-btn left">&#10094;</button>
+
+    <div class="menu-slider" id="menuSlider">
+
+      <div class="menu-container">
+        <img src="heart-minicake.jpg" alt="Heart Mini Cake">
+        <div class="menu-item-info">
+          <p class="menu-item-name">Valentine's Special</p>
+          <p class="menu-item-price">Love at first bite.</p>
+          <button class="order-button">Order Now</button>
+        </div>
+      </div>
+      <div class="menu-container">
+        <img src="cup-cakes.jpg" alt="Cupcake">
+        <div class="menu-item-info">
+          <p class="menu-item-name">Cupcakes</p>
+          <p class="menu-item-price">Bited-sized delights for every mood.</p>
+          <button class="order-button">Order Now</button>
+        </div>
+      </div>
+      <div class="menu-container">
+        <img src="crown-cake.jpg" alt="Debut Cakes">
+        <div class="menu-item-info">
+          <p class="menu-item-name">Debut Cake</p>
+          <p class="menu-item-price">Elegand designs for a grans transition to adulthood.</p>
+          <button class="order-button">Order Now</button>
+        </div>
+      </div>
+      <div class="menu-container">
+        <img src="blueyandbingo.jpg" alt="Bluey with Bingo">
+        <div class="menu-item-info">
+          <p class="menu-item-name">Baby Cake</p>
+          <p class="menu-item-price">Adorable cakes for your little ones' milestones.</p>
+          <button class="order-button">Order Now</button>
+        </div>
+      </div>
+      <div class="menu-container">
+        <img src="wedding-cake.jpg" alt="Wedding cake">
+        <div class="menu-item-info">
+          <p class="menu-item-name">Wedding Cake</p>
+          <p class="menu-item-price">Exquisite centerpieces for your special day.</p>
+          <button class="order-button">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="slider-btn right">&#10095;</button>
+  </section>
+
+  <section id="about" class="about">
+    <div class="text-content">
+      <h2>Our Cake Collection</h2>
+      <p style="text-align: justify;">Albert’s Bakeshop didn’t start as a big plan—it actually began in a tiny home
+        kitchen with a secondhand oven and a lot of late-night baking. Back then, Albert was just working a regular
+        office job, making cakes on weekends for friends and family. He liked making each one personal, whether it was
+        based on a funny memory, a favorite hobby, or a special moment. People started noticing, sharing photos online,
+        and before he knew it, orders were coming in faster than he expected. Instead of rushing to grow too quickly,
+        Albert kept things simple—taking his time with each design, talking to customers, and making sure every cake
+        tasted just as good as it looked. Over time, that small hobby turned into a cozy little business that people
+        love, not just for the cakes, but for the stories behind them.</p>
+    </div>
+    <div class="about-img-side">
+      <img src="strawberry.jpg" alt="Strawberry Cake">
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="footer-container">
+
+      <div class="footer-profile">
+        <div class="footer-logo">
+          <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" />
+        </div>
+        <p class="footer-desc">We are located at Sgt. P Bernardo, Brgy. Caniogan, Pasig, Philippines.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>CONTACT US</h4>
+          <ul>
+            <li><a href="mailto:albertsbakeshop@gmail.com">albertsbakeshop@gmail.com</a></li>
+            <li><a href="tel:+639273748404">(+63) 9273748404</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-socials">
+        <h4>FOLLOW US</h4>
+        <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_self" aria-label="Facebook">
+          <img src="facebook.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!--JAVASCRIPT-->
+
+  <!--HEROSLIDE-->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(nextSlide, 5000);
+  </script>
+
+  <!--MENUSLIDER-->
+  <script>
+    const slider = document.getElementById("menuSlider");
+    const leftBtn = document.querySelector(".slider-btn.left");
+    const rightBtn = document.querySelector(".slider-btn.right");
+
+    function getScrollAmount() {
+      const card = document.querySelector(".menu-container");
+      const gap = 20;
+      return card.offsetWidth + gap;
+    }
+
+    rightBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+    });
+
+    leftBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+    });
+  </script>
+
+  <!--HERO BUTTON FORM-->
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>
