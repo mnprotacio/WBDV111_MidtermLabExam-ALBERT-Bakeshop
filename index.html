@@ -53,7 +53,8 @@
   </div>
 </div>
 
-<body>
+<body class="homepage">
+
   <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
     <nav class="nav">
       <a href="index.html" class="navlogo">
@@ -64,12 +65,17 @@
       <ul class="navlinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#menu">Menu</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contactus.html">Contact</a></li>
-        <li><a href="inquire.html">Inquire</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
       </ul>
+
+      <div class="menutoggle" onclick="toggleMenu()">
+        ☰
+      </div>
     </nav>
   </header>
+
+
 
   <section class="herosection" id="home">
     <div class="heroslides">
@@ -94,7 +100,6 @@
         <div class="menuiteminfo">
           <p class="menuitemname">Valentine's Special</p>
           <p class="menuitemprice">starts at ₱899</p>
-          <button class="orderbutton">Order Now</button>
         </div>
       </div>
       <div class="menucontainer">
@@ -102,7 +107,6 @@
         <div class="menuiteminfo">
           <p class="menuitemname">Disco Cake</p>
           <p class="menuitemprice">starts at ₱1199</p>
-          <button class="orderbutton">Order Now</button>
         </div>
       </div>
       <div class="menucontainer">
@@ -110,7 +114,6 @@
         <div class="menuiteminfo">
           <p class="menuitemname">Crowned Cake</p>
           <p class="menuitemprice">starts at ₱1499</p>
-          <button class="orderbutton">Order Now</button>
         </div>
       </div>
       <div class="menucontainer">
@@ -118,7 +121,6 @@
         <div class="menuiteminfo">
           <p class="menuitemname">Bluey with Bingo</p>
           <p class="menuitemprice">starts at ₱1299</p>
-          <button class="orderbutton">Order Now</button>
         </div>
       </div>
       <div class="menucontainer">
@@ -126,7 +128,6 @@
         <div class="menuiteminfo">
           <p class="menuitemname">Pink Blush</p>
           <p class="menuitemprice"> starts at ₱1899</p>
-          <button class="orderbutton">Order Now</button>
         </div>
       </div>
     </div>
@@ -182,9 +183,9 @@
           <h4>EXPLORE</h4>
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="index.html#menu">Products</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="footercol">
@@ -192,9 +193,7 @@
           <ul>
             <li><a href="mailto:albertsbakeshop@gmail.com">albertsbakeshop@gmail.com</a></li>
             <li><a href="tel:+639273748404">(+63) 9273748404</a></li>
-            <li>
-              <p>Mondays to Sundays- 9:00 AM to 9:00 PM</p>
-            </li>
+            <li><a>Mondays to Sundays- 9:00 AM to 9:00 PM</a></li>
           </ul>
         </div>
       </div>
@@ -207,75 +206,7 @@
     </div>
   </footer>
 
-  <!--JAVASCRIPT-->
-
-  <!--HEROSLIDESCHANGE-->
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-
-    setInterval(nextSlide, 5000);
-  </script>
-
-  <!--HERO BUTTON FORM-->
-  <script>
-    function openPopup() {
-      document.getElementById("popup").classList.add("active");
-    }
-
-    function closePopup() {
-      document.getElementById("popup").classList.remove("active");
-    }
-  </script>
-  <script>
-    const submitBtn = document.querySelector(".submit-btn");
-
-    submitBtn.addEventListener("click", function () {
-      const inputs = document.querySelectorAll(".popup-form input, .popup-form textarea, .popup-form select");
-      let isValid = true;
-
-      inputs.forEach(input => {
-        if (input.value.trim() === "") {
-          isValid = false;
-        }
-      });
-
-      if (isValid) {
-        alert("Message sent successfully!");
-        closePopup();
-      } else {
-        alert("All fields are required. Please fill out the form completely.");
-      }
-    });
-  </script>
-
-  <!--MENUSLIDER-->
-  <script>
-    const slider = document.getElementById("menuSlider");
-    const leftBtn = document.querySelector(".slider-btn.left");
-    const rightBtn = document.querySelector(".slider-btn.right");
-
-    function getScrollAmount() {
-      const card = document.querySelector(".menucontainer");
-      const gap = 20;
-      return card.offsetWidth + gap;
-    }
-
-    rightBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
-    });
-
-    leftBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
