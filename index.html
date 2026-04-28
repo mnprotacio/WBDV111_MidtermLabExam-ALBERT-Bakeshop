@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="alberts-bakeshop.png">
-  <link rel="stylesheet" href="test2.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <!--HEROBUTTON FORM-->
@@ -54,32 +54,32 @@
 </div>
 
 <body>
-
-  <nav class="nav">
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
     <nav class="nav">
-      <a href="index.html" class="nav-logo">
+      <a href="index.html" class="navlogo">
         <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" />
-        <p class="nav-logo-text">Albert's Bakeshop</p>
+        <p class="navlogotext">Albert's Bakeshop</p>
       </a>
 
-      <ul class="nav-links">
+      <ul class="navlinks">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="inquire.html">Inquire</a></li>
       </ul>
     </nav>
-  </nav>
+  </header>
 
   <section class="herosection" id="home">
-    <div class="hero-slides">
-      <div class="slide active" style="background-image: url('cake-hero.png')"></div>
+    <div class="heroslides">
+      <div class="slide active" style="background-image: url('cake-hero.jpg')"></div>
       <div class="slide" style="background-image: url('cupcake-hero.jpg')"></div>
     </div>
-    <div class="hero-content">
-      <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" class="hero-logo">
-      <h1 class="hero-title">Albert's Bakeshop</h1>
-      <p class="hero-desc">"Crafted to Taste, Designed to Impress"</p>
+    <div class="herocontent">
+      <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" class="herologo">
+      <h1 class="herotitle">Albert's Bakeshop</h1>
+      <p class="herodesc">"Crafted to Taste, Designed to Impress"</p>
       <button class="custom-btn" onclick="openPopup()">Custom Cake</button>
     </div>
   </section>
@@ -87,55 +87,70 @@
   <section id="menu" class="menu">
     <button class="slider-btn left">&#10094;</button>
 
-    <div class="menu-slider" id="menuSlider">
+    <div class="menuslider" id="menuSlider">
 
-      <div class="menu-container">
+      <div class="menucontainer">
         <img src="heart-minicake.jpg" alt="Heart Mini Cake">
-        <div class="menu-item-info">
-          <p class="menu-item-name">Valentine's Special</p>
-          <p class="menu-item-price">Love at first bite.</p>
-          <button class="order-button">Order Now</button>
+        <div class="menuiteminfo">
+          <p class="menuitemname">Valentine's Special</p>
+          <p class="menuitemprice">starts at ₱899</p>
+          <button class="orderbutton">Order Now</button>
         </div>
       </div>
-      <div class="menu-container">
-        <img src="cup-cakes.jpg" alt="Cupcake">
-        <div class="menu-item-info">
-          <p class="menu-item-name">Cupcakes</p>
-          <p class="menu-item-price">Bited-sized delights for every mood.</p>
-          <button class="order-button">Order Now</button>
+      <div class="menucontainer">
+        <img src="music-cake.jpg" alt="Music Cake">
+        <div class="menuiteminfo">
+          <p class="menuitemname">Disco Cake</p>
+          <p class="menuitemprice">starts at ₱1199</p>
+          <button class="orderbutton">Order Now</button>
         </div>
       </div>
-      <div class="menu-container">
-        <img src="crown-cake.jpg" alt="Debut Cakes">
-        <div class="menu-item-info">
-          <p class="menu-item-name">Debut Cake</p>
-          <p class="menu-item-price">Elegand designs for a grans transition to adulthood.</p>
-          <button class="order-button">Order Now</button>
+      <div class="menucontainer">
+        <img src="crown-cake.jpg" alt="Crown Cake">
+        <div class="menuiteminfo">
+          <p class="menuitemname">Crowned Cake</p>
+          <p class="menuitemprice">starts at ₱1499</p>
+          <button class="orderbutton">Order Now</button>
         </div>
       </div>
-      <div class="menu-container">
+      <div class="menucontainer">
         <img src="blueyandbingo.jpg" alt="Bluey with Bingo">
-        <div class="menu-item-info">
-          <p class="menu-item-name">Baby Cake</p>
-          <p class="menu-item-price">Adorable cakes for your little ones' milestones.</p>
-          <button class="order-button">Order Now</button>
+        <div class="menuiteminfo">
+          <p class="menuitemname">Bluey with Bingo</p>
+          <p class="menuitemprice">starts at ₱1299</p>
+          <button class="orderbutton">Order Now</button>
         </div>
       </div>
-      <div class="menu-container">
-        <img src="wedding-cake.jpg" alt="Wedding cake">
-        <div class="menu-item-info">
-          <p class="menu-item-name">Wedding Cake</p>
-          <p class="menu-item-price">Exquisite centerpieces for your special day.</p>
-          <button class="order-button">Order Now</button>
+      <div class="menucontainer">
+        <img src="pink-royalty.jpg" alt="Pink Royalty">
+        <div class="menuiteminfo">
+          <p class="menuitemname">Pink Blush</p>
+          <p class="menuitemprice"> starts at ₱1899</p>
+          <button class="orderbutton">Order Now</button>
         </div>
       </div>
     </div>
 
+    <div class="popup-overlay" id="orderPopup">
+      <div class="popup-box">
+        <span class="close-btn" onclick="closeOrderPopup()">&times;</span>
+        <h2>Order Cake</h2>
+
+        <label>Select Quantity</label>
+        <div class="quantity-box">
+          <button onclick="changeQty(-1)">-</button>
+          <input type="text" id="qty" value="1" readonly>
+          <button onclick="changeQty(1)">+</button>
+        </div>
+
+        <button class="submit-btn" onclick="confirmOrder()">Confirm Order</button>
+      </div>
+    </div>
     <button class="slider-btn right">&#10095;</button>
   </section>
 
   <section id="about" class="about">
-    <div class="text-content">
+    <div class="textcontent">
       <h2>Our Cake Collection</h2>
       <p style="text-align: justify;">Albert’s Bakeshop didn’t start as a big plan—it actually began in a tiny home
         kitchen with a secondhand oven and a lot of late-night baking. Back then, Albert was just working a regular
@@ -146,41 +161,45 @@
         tasted just as good as it looked. Over time, that small hobby turned into a cozy little business that people
         love, not just for the cakes, but for the stories behind them.</p>
     </div>
-    <div class="about-img-side">
+    <div class="aboutimgside">
       <img src="strawberry.jpg" alt="Strawberry Cake">
     </div>
   </section>
 
   <footer id="contact" class="footer">
-    <div class="footer-container">
+    <div class="footercontainer">
 
-      <div class="footer-profile">
-        <div class="footer-logo">
+      <div class="footerprofile">
+        <div class="footerlogo">
           <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" />
+          <p class="footerlogotext">Albert's Bakeshop</p>
         </div>
-        <p class="footer-desc">We are located at Sgt. P Bernardo, Brgy. Caniogan, Pasig, Philippines.</p>
+        <p class="footerdesc">We are located at Sgt. P Bernardo, Brgy. Caniogan, Pasig, Philippines.</p>
       </div>
 
-      <div class="footer-links">
-        <div class="footer-col">
+      <div class="footerlinks">
+        <div class="footercol">
           <h4>EXPLORE</h4>
           <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
-        <div class="footer-col">
-          <h4>CONTACT US</h4>
+        <div class="footercol">
+          <h4>For Inquiries</h4>
           <ul>
             <li><a href="mailto:albertsbakeshop@gmail.com">albertsbakeshop@gmail.com</a></li>
             <li><a href="tel:+639273748404">(+63) 9273748404</a></li>
+            <li>
+              <p>Mondays to Sundays- 9:00 AM to 9:00 PM</p>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="footer-socials">
-        <h4>FOLLOW US</h4>
+      <div class="footersocials">
+        <h4>OUR SOCIALS</h4>
         <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_self" aria-label="Facebook">
           <img src="facebook.png" alt="Facebook">
         </a>
@@ -190,7 +209,7 @@
 
   <!--JAVASCRIPT-->
 
-  <!--HEROSLIDE-->
+  <!--HEROSLIDESCHANGE-->
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
@@ -204,6 +223,38 @@
     setInterval(nextSlide, 5000);
   </script>
 
+  <!--HERO BUTTON FORM-->
+  <script>
+    function openPopup() {
+      document.getElementById("popup").classList.add("active");
+    }
+
+    function closePopup() {
+      document.getElementById("popup").classList.remove("active");
+    }
+  </script>
+  <script>
+    const submitBtn = document.querySelector(".submit-btn");
+
+    submitBtn.addEventListener("click", function () {
+      const inputs = document.querySelectorAll(".popup-form input, .popup-form textarea, .popup-form select");
+      let isValid = true;
+
+      inputs.forEach(input => {
+        if (input.value.trim() === "") {
+          isValid = false;
+        }
+      });
+
+      if (isValid) {
+        alert("Message sent successfully!");
+        closePopup();
+      } else {
+        alert("All fields are required. Please fill out the form completely.");
+      }
+    });
+  </script>
+
   <!--MENUSLIDER-->
   <script>
     const slider = document.getElementById("menuSlider");
@@ -211,7 +262,7 @@
     const rightBtn = document.querySelector(".slider-btn.right");
 
     function getScrollAmount() {
-      const card = document.querySelector(".menu-container");
+      const card = document.querySelector(".menucontainer");
       const gap = 20;
       return card.offsetWidth + gap;
     }
@@ -223,17 +274,6 @@
     leftBtn.addEventListener("click", () => {
       slider.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
     });
-  </script>
-
-  <!--HERO BUTTON FORM-->
-  <script>
-    function openPopup() {
-      document.getElementById("popup").style.display = "flex";
-    }
-
-    function closePopup() {
-      document.getElementById("popup").style.display = "none";
-    }
   </script>
 
 </body>
