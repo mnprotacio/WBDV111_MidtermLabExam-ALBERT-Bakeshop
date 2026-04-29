@@ -7,7 +7,7 @@
   <title>albertsbakeshop.com</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="alberts-bakeshop.png">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -69,7 +69,7 @@
         <li><a href="contact-us.html">Contact</a></li>
       </ul>
 
-      <div class="menutoggle" onclick="toggleMenu()">
+      <div class="navmobile" onclick="toggleMenu()">
         ☰
       </div>
     </nav>
@@ -131,43 +131,10 @@
         </div>
       </div>
     </div>
-
-    <div class="popup-overlay" id="orderPopup">
-      <div class="popup-box">
-        <span class="close-btn" onclick="closeOrderPopup()">&times;</span>
-        <h2>Order Cake</h2>
-
-        <label>Select Quantity</label>
-        <div class="quantity-box">
-          <button onclick="changeQty(-1)">-</button>
-          <input type="text" id="qty" value="1" readonly>
-          <button onclick="changeQty(1)">+</button>
-        </div>
-
-        <button class="submit-btn" onclick="confirmOrder()">Confirm Order</button>
-      </div>
-    </div>
     <button class="slider-btn right">&#10095;</button>
   </section>
 
-  <section id="about" class="about">
-    <div class="textcontent">
-      <h2>Our Cake Collection</h2>
-      <p style="text-align: justify;">Albert’s Bakeshop didn’t start as a big plan—it actually began in a tiny home
-        kitchen with a secondhand oven and a lot of late-night baking. Back then, Albert was just working a regular
-        office job, making cakes on weekends for friends and family. He liked making each one personal, whether it was
-        based on a funny memory, a favorite hobby, or a special moment. People started noticing, sharing photos online,
-        and before he knew it, orders were coming in faster than he expected. Instead of rushing to grow too quickly,
-        Albert kept things simple—taking his time with each design, talking to customers, and making sure every cake
-        tasted just as good as it looked. Over time, that small hobby turned into a cozy little business that people
-        love, not just for the cakes, but for the stories behind them.</p>
-    </div>
-    <div class="aboutimgside">
-      <img src="strawberry.jpg" alt="Strawberry Cake">
-    </div>
-  </section>
-
-  <footer id="contact" class="footer">
+  <footer id="footer" class="footer">
     <div class="footercontainer">
 
       <div class="footerprofile">
@@ -175,7 +142,7 @@
           <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" />
           <p class="footerlogotext">Albert's Bakeshop</p>
         </div>
-        <p class="footerdesc">We are located at Sgt. P Bernardo, Brgy. Caniogan, Pasig, Philippines.</p>
+        <p class="footerdesc">The neighborhood bakeshop chain loved by community.</p>
       </div>
 
       <div class="footerlinks">
@@ -183,7 +150,7 @@
           <h4>EXPLORE</h4>
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="index.html#menu">Products</a></li>
+            <li><a href="index.html#menu">Our Products</a></li>
             <li><a href="about-us.html">About Us</a></li>
             <li><a href="contact-us.html">Contact Us</a></li>
           </ul>
