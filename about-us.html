@@ -4,21 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Albert's Bakeshop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="alberts-bakeshop.png">
+    <title>About | ALBERT'S BAKESHOP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="aboutpage">
 
+    <!--NAV-->
     <header>
         <nav class="nav">
             <a href="index.html" class="navlogo">
-                <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" />
-                <p class="navlogotext">Albert's Bakeshop</p>
+                <img src="logo.png" alt="Albert's Bakeshop Logo" />
             </a>
             <ul class="navlinks">
                 <li><a href="index.html">Home</a></li>
@@ -27,22 +25,41 @@
                 <li><a href="contact-us.html">Contact</a></li>
             </ul>
 
-            <!--MENU NAV BAR FOR MOBILE TO-->
-            <div class="menutoggle" onclick="toggleMenu()">
+            <!--MENU HAMBURGER FOR MOBILE AND TABLET-->
+            <div class="navmobiletablet" onclick="toggleMenu()">
                 ☰
             </div>
         </nav>
     </header>
 
+
+
+
+    <!--HAMBURGER POPUP WHEN CLICKED -->
+    <div class="navdrawer">
+        <span class="drawer-close" onclick="toggleMenu()">✕</span>
+        <ul>
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="index.html#menu" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
+            <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+    <div class="overlay" onclick="toggleMenu()"></div>
+
+
+
+
     <section class="herosection" id="home">
         <div class="heroslides">
-            <div class="slide active" style="background-image: url('cake-hero.jpg')"></div>
+            <div class="slide active" style="background-image: url('cake-hero.png')"></div>
             <div class="slide" style="background-image: url('cupcake-hero.jpg')"></div>
         </div>
 
-        <main style="padding-top: 90px;">
+        <main style="padding: 40px;">
 
             <section id="about" class="about">
+
                 <div class="textcontent">
                     <h2>We are Albert's Bakeshop</h2>
                     <p style="text-align: justify;">At Albert's bakeshop, we pride ourselves on crafting delightful
@@ -53,37 +70,33 @@
                         celebrate with grace. There’s a cake for every occasion!</p>
                 </div>
             </section>
-
         </main>
-
     </section>
 
     <footer id="contact" class="footer">
         <div class="footercontainer">
             <div class="footerprofile">
                 <div class="footerlogo">
-                    <img src="alberts-bakeshop.png" alt="Albert's Bakeshop Logo" />
-                    <p class="footerlogotext">Albert's Bakeshop</p>
+                    <img src="logo.png" alt="Albert's Bakeshop Logo" />
                 </div>
-                <p class="footerdesc">We are located at Sgt. P Bernardo, Brgy. Caniogan, Pasig, Philippines.</p>
             </div>
             <div class="footerlinks">
                 <div class="footercol">
-                    <h4>EXPLORE</h4>
+                    <h4>QUICK LINKS</h4>
                     <ul>
                         <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#menu">Products</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footercol">
-                    <h4>For Inquiries</h4>
+                    <h4>INFORMATION</h4>
                     <ul>
                         <li><a href="mailto:albertsbakeshop@gmail.com">albertsbakeshop@gmail.com</a></li>
                         <li><a href="tel:+639273748404">(+63) 9273748404</a></li>
                         <li>
-                            <p>Mondays to Sundays- 9:00 AM to 9:00 PM</p>
+                            <p>Mondays to Sundays 9:00 AM to 9:00 PM</p>
                         </li>
                     </ul>
                 </div>
@@ -94,6 +107,9 @@
                     <img src="facebook.png" alt="Facebook">
                 </a>
             </div>
+        </div>
+        <div class="footercopyright">
+            <p>© 2024 Albert's Bakeshop. All rights reserved.</p>
         </div>
     </footer>
 
