@@ -1,22 +1,27 @@
-//HEROSLIDESCHANGE
-    let currentSlide = 0;
+//HERO SLIDES CHANGE
+let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
+const contents = document.querySelectorAll('.herocontent');
 
 function nextSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('active');
+  slides[currentSlide].classList.remove('active');
+  contents[currentSlide].classList.remove('active');
+
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  slides[currentSlide].classList.add('active');
+  contents[currentSlide].classList.add('active');
 }
 
 setInterval(nextSlide, 5000);
 
 
-  
-//HERO BUTTON FORM
 
-    function openPopup() {
-        document.getElementById("popup").classList.add("active");
-    }
+/* FORM
+
+function openPopup() {
+    document.getElementById("popup").classList.add("active");
+}
 
 function closePopup() {
     document.getElementById("popup").classList.remove("active");
@@ -42,18 +47,17 @@ submitBtn.addEventListener("click", function () {
         alert("All fields are required. Please fill out the form completely.");
     }
 });
+*/
 
-
-//MENUSLIDER
-
-const slider = document.getElementById("menuSlider");
+// MENU SLIDES
+const slider = document.getElementById("menugrid");
 const leftBtn = document.querySelector(".slider-btn.left");
 const rightBtn = document.querySelector(".slider-btn.right");
 
 function getScrollAmount() {
     const card = document.querySelector(".menucontainer");
     const gap = 20;
-    return card.offsetWidth + gap;
+    return (card.offsetWidth + gap) * 4;
 }
 
 rightBtn.addEventListener("click", () => {
@@ -64,7 +68,26 @@ leftBtn.addEventListener("click", () => {
     slider.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
 });
 
-// MOBILE NAV MENU
+
+// MOBILE & TABLET NAV MENU
 function toggleMenu() {
-  document.querySelector(".navlinks").classList.toggle("open");
+  document.querySelector(".navdrawer").classList.toggle("open");
+  document.querySelector(".overlay").classList.toggle("open");
 }
+
+//HIDE&SHOW NAVBAR ON SCROLL
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 80) {
+    // scrolling DOWN - hide navbar
+    document.querySelector("header").style.transform = "translateY(-100%)";
+  } else {
+    // scrolling UP - show navbar
+    document.querySelector("header").style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
+});
