@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ALBERT'S BAKESHOP</title>
+    <title>Albert's Bakeshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="nav-logo.png">
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="homepage">
 
-    <!--NAV-->
     <header>
         <nav class="nav">
             <a href="index.html" class="navlogo">
-                <img src="logo.png" alt="Albert's Bakeshop Logo" />
+                <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
             </a>
 
             <ul class="navlinks">
@@ -25,16 +28,12 @@
                 <li><a href="about-us.html">About</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
             </ul>
-
-            <div class="navmobiletablet" onclick="toggleMenu()">
-                ☰
-            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
 
-
-    <!--HAMBURGER POPUP WHEN CLICKED -->
-    <div class="navdrawer">
+    <!-- SIDE DRAWER (MOBILE & TABLET) -->
+    <div class="hamburgerdrawer">
         <span class="drawer-close" onclick="toggleMenu()">✕</span>
         <ul>
             <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
@@ -42,39 +41,45 @@
             <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
             <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
         </ul>
+
+        <div class="drawersocials">
+                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+            </div>
     </div>
     <div class="overlay" onclick="toggleMenu()"></div>
 
-
-
-    <!--HERO-->
-
     <section class="herosection" id="home">
+
+        <!-- BACKGROUND SLIDES -->
         <div class="heroslides">
             <div class="slide active" style="background-image: url('cake-hero.png')"></div>
             <div class="slide" style="background-image: url('cupcake-hero.jpg')"></div>
         </div>
+
+        <!-- SLIDE 1 CONTENT -->
         <div class="herocontent active" data-index="0">
             <p class="herodesc">CUSTOM CAKES YOUR WAY.</p>
-            <h1 class="herotitle">Customized cakes,<br>bespoke to you.</h1>
-            <a href="contact-us.html" class="herobtn">EXPLORE CUSTOMIZED CAKES</a>
+            <h1 class="herotitle">Customized cakes, <br>bespoke to you.</h1>
+            <a href="contact-us.html" class="herobtn">ORDER CUSTOMIZED CAKES</a>
         </div>
 
+        <!-- SLIDE 2 CONTENT -->
         <div class="herocontent" data-index="1">
             <p class="herodesc">SAME-DAY DELIVERY</p>
             <h1 class="herotitle">Celebration cakes for<br>every occasion</h1>
             <a href="index.html#menu" class="herobtn">SHOP CAKES</a>
         </div>
+
     </section>
 
+    <section id="menu" class="menu fadedown">
 
-
-    <!-- MENU -->
-
-    <section id="menu" class="menu">
         <button class="slider-btn left">&#10094;</button>
 
         <div class="menugrid" id="menugrid">
+
             <div class="menucontainer">
                 <img src="heart-minicake.jpg" alt="Heart Mini Cake">
                 <div class="menuiteminfo">
@@ -82,6 +87,7 @@
                     <p class="menuitemprice">starts at ₱899</p>
                 </div>
             </div>
+
             <div class="menucontainer">
                 <img src="music-cake.jpg" alt="Music Cake">
                 <div class="menuiteminfo">
@@ -89,6 +95,7 @@
                     <p class="menuitemprice">starts at ₱1199</p>
                 </div>
             </div>
+
             <div class="menucontainer">
                 <img src="crown-cake.jpg" alt="Crown Cake">
                 <div class="menuiteminfo">
@@ -96,6 +103,7 @@
                     <p class="menuitemprice">starts at ₱1499</p>
                 </div>
             </div>
+
             <div class="menucontainer">
                 <img src="blueyandbingo.jpg" alt="Bluey with Bingo">
                 <div class="menuiteminfo">
@@ -103,13 +111,15 @@
                     <p class="menuitemprice">starts at ₱1299</p>
                 </div>
             </div>
+
             <div class="menucontainer">
                 <img src="pink-royalty.jpg" alt="Pink Royalty">
                 <div class="menuiteminfo">
                     <p class="menuitemname">Pink Blush</p>
-                    <p class="menuitemprice"> starts at ₱1899</p>
+                    <p class="menuitemprice">starts at ₱1899</p>
                 </div>
             </div>
+
             <div class="menucontainer">
                 <img src="heart-minicake.jpg" alt="Heart Mini Cake">
                 <div class="menuiteminfo">
@@ -117,6 +127,7 @@
                     <p class="menuitemprice">starts at ₱899</p>
                 </div>
             </div>
+
             <div class="menucontainer">
                 <img src="music-cake.jpg" alt="Music Cake">
                 <div class="menuiteminfo">
@@ -124,6 +135,7 @@
                     <p class="menuitemprice">starts at ₱1199</p>
                 </div>
             </div>
+
             <div class="menucontainer">
                 <img src="crown-cake.jpg" alt="Crown Cake">
                 <div class="menuiteminfo">
@@ -131,19 +143,21 @@
                     <p class="menuitemprice">starts at ₱1499</p>
                 </div>
             </div>
+
         </div>
         <button class="slider-btn right">&#10095;</button>
+
     </section>
 
 
-    <!-- FOOTER -->
 
     <footer id="footer" class="footer">
+
         <div class="footercontainer">
 
             <div class="footerprofile">
                 <div class="footerlogo">
-                    <img src="logo.png" alt="Albert's Bakeshop Logo" />
+                    <img src="logo-footer.png" alt="Albert's Bakeshop Logo" />
                 </div>
             </div>
 
@@ -160,22 +174,32 @@
                 <div class="footercol">
                     <h4>INFORMATION</h4>
                     <ul>
-                        <li><a href="mailto:albertsbakeshop@gmail.com">albertsbakeshop@gmail.com</a></li>
-                        <li><a href="tel:+639273748404">(+63) 9273748404</a></li>
-                        <li><a>Mondays to Sundays 9:00 AM to 9:00 PM</a></li>
+                        <li>
+                            <p>albertsbakeshop@example.com</p>
+                        </li>
+                        <li>
+                            <p>09273748404</p>
+                        </li>
+                        <li>
+                            <p>Mondays to Sundays 9:00 AM to 9:00 PM</p>
+                        </li>
                     </ul>
                 </div>
             </div>
+
             <div class="footersocials">
                 <h4>OUR SOCIALS</h4>
-                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_self" aria-label="Facebook">
+                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank" aria-label="Facebook">
                     <img src="facebook.png" alt="Facebook">
                 </a>
             </div>
+
         </div>
+
         <div class="footercopyright">
             <p>© 2024 Albert's Bakeshop. All rights reserved.</p>
         </div>
+
     </footer>
 
     <script src="script.js"></script>
