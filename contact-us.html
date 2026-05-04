@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | ALBERT'S BAKESHOP</title>
-
+    <title>Contact | Albert's Bakeshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="logo.png">
+    <link rel="icon" href="nav-logo.png">
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -15,7 +18,7 @@
     <header>
         <nav class="nav">
             <a href="index.html" class="navlogo">
-                <img src="logo.png" alt="Albert's Bakeshop Logo" />
+                <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
             </a>
 
             <ul class="navlinks">
@@ -24,7 +27,7 @@
                 <li><a href="about-us.html">About</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
             </ul>
-            <div class="navmobiletablet" onclick="toggleMenu()">
+            <div class="hamburger" onclick="toggleMenu()">
                 ☰
             </div>
         </nav>
@@ -35,7 +38,7 @@
 
 
     <!--HAMBURGER POPUP WHEN CLICKED -->
-    <div class="navdrawer">
+    <div class="hamburgerdrawer">
         <span class="drawer-close" onclick="toggleMenu()">✕</span>
         <ul>
             <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
@@ -43,6 +46,12 @@
             <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
             <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
         </ul>
+
+        <div class="drawersocials">
+                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+            </div>
     </div>
     <div class="overlay" onclick="toggleMenu()"></div>
 
@@ -61,7 +70,7 @@
         <div class="footercontainer">
             <div class="footerprofile">
                 <div class="footerlogo">
-                    <img src="logo.png" alt="Albert's Bakeshop Logo" />
+                    <img src="logo-footer.png" alt="Albert's Bakeshop Logo" />
                 </div>
             </div>
             <div class="footerlinks">
@@ -77,8 +86,8 @@
                 <div class="footercol">
                     <h4>INFORMATION</h4>
                     <ul>
-                        <li><a href="mailto:albertsbakeshop@gmail.com">albertsbakeshop@gmail.com</a></li>
-                        <li><a href="tel:+639273748404">(+63) 9273748404</a></li>
+                        <li><a href="mailto:albertsbakeshop@gmail.com">albertsbakeshop@example.com</a></li>
+                        <li><a href="tel:+639273748404">09273748404</a></li>
                         <li>
                             <p>Mondays to Sundays 9:00 AM to 9:00 PM</p>
                         </li>
@@ -87,7 +96,7 @@
             </div>
             <div class="footersocials">
                 <h4>OUR SOCIALS</h4>
-                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_self" aria-label="Facebook">
+                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank" aria-label="Facebook">
                     <img src="facebook.png" alt="Facebook">
                 </a>
             </div>
