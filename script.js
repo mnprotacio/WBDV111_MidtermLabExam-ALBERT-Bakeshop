@@ -1,19 +1,29 @@
-//HERO SLIDES CHANGE
-let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const contents = document.querySelectorAll('.herocontent');
 
-function nextSlide() {
-  slides[currentSlide].classList.remove('active');
-  contents[currentSlide].classList.remove('active');
+if (slides.length > 0) {
+  let currentSlide = 0;
 
-  currentSlide = (currentSlide + 1) % slides.length;
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[0].classList.add('active');
 
-  slides[currentSlide].classList.add('active');
-  contents[currentSlide].classList.add('active');
+  if (contents.length > 0) {
+    contents.forEach(c => c.classList.remove('active'));
+    contents[0].classList.add('active');
+  }
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove('active');
+    contents[currentSlide]?.classList.remove('active');
+
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    slides[currentSlide].classList.add('active');
+    contents[currentSlide]?.classList.add('active');
+  }
+
+  setInterval(nextSlide, 5000);
 }
-
-setInterval(nextSlide, 5000);
 
 
 
@@ -71,7 +81,7 @@ leftBtn.addEventListener("click", () => {
 
 // MOBILE & TABLET NAV MENU
 function toggleMenu() {
-  document.querySelector(".navdrawer").classList.toggle("open");
+  document.querySelector(".hamburgerdrawer").classList.toggle("open");
   document.querySelector(".overlay").classList.toggle("open");
 }
 
@@ -83,7 +93,7 @@ window.addEventListener("scroll", () => {
 
   if (currentScroll > lastScroll && currentScroll > 80) {
     // scrolling DOWN - hide navbar
-    document.querySelector("header").style.transform = "translateY(-100%)";
+    document.querySelector("header").style.transform = "translateY(-2   0%)";
   } else {
     // scrolling UP - show navbar
     document.querySelector("header").style.transform = "translateY(0)";
@@ -91,3 +101,16 @@ window.addEventListener("scroll", () => {
 
   lastScroll = currentScroll;
 });
+
+// FADE IN ANIMATION
+const fadeElements = document.querySelectorAll('.fadedown');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+fadeElements.forEach(el => observer.observe(el));
