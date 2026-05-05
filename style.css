@@ -315,7 +315,7 @@ nav {
     display: flex;
     max-width: 1200px;
     gap: 24px;
-    overflow: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
 }
 .menugrid::-webkit-scrollbar {
