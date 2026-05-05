@@ -639,6 +639,9 @@ p {
     .menucontainer img {
         height: 200px;
     }
+    .menugrid {
+        overflow-x: auto;
+    }
     .about {
         flex-direction: column;
         margin: 20px;
