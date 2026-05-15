@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Albert's Bakeshop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="nav-logo.png">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="contactpage">
+<body>
+
+    <!-- NAVBAR -->
     <header>
         <nav class="nav">
+
             <a href="index.html" class="navlogo">
-                <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
+                <img src="nav-logo.png" alt="Albert's Bakeshop Logo">
             </a>
 
             <ul class="navlinks">
@@ -27,99 +30,19 @@
                 <li><a href="about-us.html">About</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
             </ul>
+
             <div class="hamburger" onclick="toggleMenu()">
                 ☰
             </div>
+
         </nav>
     </header>
 
-
-    <div class="container">
-    <!-- LEFT SIDE -->
-    <div class="info">
-      <h2>GET IN TOUCH WITH US!</h2>
-
-      <b>OUR LOCATION</b>
-      <p><em>
-        Lwood Street Javier Compound<br>
-        Brgy. Dolores 1920, Taytay, Rizal<br>
-        Philippines.
-      </p></em>
-
-      <!-- GOOGLE MAP -->
-      <!-- GOOGLE MAP WITH PIN -->
-<div class="map-container">
-  <iframe 
-    width="100%" 
-    height="250" 
-    style="border:0; border-radius:12px;" 
-    referrerpolicy="no-referrer-when-downgrade"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61783.44180605113!2d121.1345766590678!3d14.57255285963115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7004288dde7%3A0x6eb1fb6d8ee59988!2s99%20Int.%20L.%20Wood!5e0!3m2!1sen!2sph!4v1774076757239!5m2!1sen!2sph" 
-    allowfullscreen 
-    loading="lazy">
-  </iframe>
-</div>
-
-      <b>PHONE NUMBER</b>
-      <p><em>+63 956 251 3213</em></p>
-
-      <b>EMAIL ADDRESS</b>
-      <p><em>dncevents@gmail.com</em></p>
-
-      <b>BUSINESS HOURS</b>
-      <p><em>
-        MONDAY - SUNDAY: <strong>7:00 AM - 10:00 PM<br></strong>
-        MONDAY - SATURDAY: <strong>By Walk-in Only.<br></strong>
-        SUNDAY: <strong>By Appointment Only.</strong>
-      </em></p>
-
-      <b>FOLLOW US</b>
-      <div class="social">
-        <a href="https://www.facebook.com/share/14QaafsE15N/?mibextid=wwXIfr" target="_blank" class="facebook">
-          <img src="images/FOOTER - FACEBOOK ICON.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/hiiamdanica?igsh=emtkZmtjdzR0ZDdv" target="_blank" class="instagram">
-          <img src="images/FOOTER - IG ICON.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/@dncevents?_r=1&_t=ZS-94Y4OxuLlOC" target="_blank" class="tiktok">
-          <img src="images/FOOTER - TIKTOK ICON.png" alt="TikTok">
-        </a>
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE -->
-   <div class="form">
-  <h2>SEND US MESSAGE</h2>
-
-  <form id="inquiryForm">
-
-    <label>YOUR NAME *</label>
-    <input type="text" maxlength="50" id="name" placeholder="Enter Your Name" required
-     oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')">
-    
-    <label>PHONE NUMBER *</label>
-    <input type="text" id="phone" placeholder="09XX-XXX-XXXX" maxlength="13" required>
-
-    <label>EMAIL ADDRESS *</label>
-    <input type="email" id="email" placeholder="Enter Your @email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-
-    <label>SUBJECT *</label>
-    <input type="text" id="subject" placeholder="What is this regarding?" required>
-
-    <label>MESSAGE *</label>
-    <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
-
-    <button type="submit" id="submitBtn">SEND MESSAGE</button>
-
-  </form>
-
-   <p id="statusMessage"></p>
-</div>
-</div>
-
-    <!--HAMBURGER POPUP WHEN CLICKED -->
+    <!-- MOBILE DRAWER -->
     <div class="hamburgerdrawer">
+
         <span class="drawer-close" onclick="toggleMenu()">✕</span>
+
         <ul>
             <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
             <li><a href="index.html#menu" onclick="toggleMenu()">Menu</a></li>
@@ -128,65 +51,191 @@
         </ul>
 
         <div class="drawersocials">
-                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
-                    <img src="facebook.png" alt="Facebook">
-                </a>
-            </div>
+            <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
+                <img src="facebook.png" alt="Facebook">
+            </a>
+        </div>
+
     </div>
     <div class="overlay" onclick="toggleMenu()"></div>
 
+    <!-- CONTACT SECTION -->
+    <section class="contactsection">
 
+        <!-- LEFT SIDE -->
+        <div class="contactinfo">
 
+            <span class="contacttag">
+                CONTACT US
+            </span>
 
+            <h1>GET IN TOUCH!</h1>
 
-    <section class="herosection" id="home">
-        <div class="heroslides">
-            <div class="slide active" style="background-image: url('cake-hero.png')"></div>
-            <div class="slide" style="background-image: url('cupcake-hero.jpg')"></div>
+            <p class="contactdesc">
+                Have questions about our cakes, customized orders,
+                reservations, or event bookings?
+                Fill out the form and our Albert’s Bakeshop
+                team will reach out to you.
+            </p>
+
+            <div class="contactdetails">
+
+                <div class="detailbox">
+                    <h3>OUR LOCATION</h3>
+                    <p>Lwood Street Javier Compound <br>Brgy. Dolores 1920, Taytay, Rizal <br>Philippines</p>
+                </div>
+
+                <div class="detailbox">
+                    <h3>PHONE NUMBER</h3>
+                    <p>095 6251 3213</p>
+                </div>
+
+                <div class="detailbox">
+                    <h3>EMAIL ADDRESS</h3>
+                    <p>albertsbakeshop@example.com</p>
+                </div>
+
+                <div class="detailbox">
+                    <h3>BUSINESS HOURS</h3>
+                    <p>Monday - Sunday <br>9:00 AM - 10:00 PM</p>
+                </div>
+
+            </div>
+
+            <!-- FORM SOCIALS -->
+            <div class="contactsocials">
+
+                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.tiktok.com/@alberts.bakeshop" target="_blank">
+                    <img src="tiktok-logo.png" alt="TikTok">
+                </a>
+            </div>
+
         </div>
+
+        <!-- RIGHT SIDE FORM-->
+        <div class="contactformwrapper">
+
+            <form class="contactform">
+
+                <div class="formgroup">
+                    <label>Full Name *</label>
+                    <input type="text" id="fullname" placeholder="e.g. John Smith" required>
+                </div>
+
+                <div class="formgroup">
+                    <label>Email Address *</label>
+                    <input type="email" placeholder="name@email.com" required>
+                </div>
+
+                <div class="formgroup">
+                    <label>Phone Number *</label>
+                    <input type="text" placeholder="+63 9XX XXX XXXX" required>
+                </div>
+
+                <div class="formgroup">
+                    <label>What would you like to discuss?</label>
+
+                    <select>
+                        <option>Select...</option>
+                        <option>Customized Cakes</option>
+                        <option>Reservations</option>
+                        <option>Events & Catering</option>
+                        <option>General Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="formgroup fullwidth">
+                    <label>Message *</label>
+                    <textarea placeholder="Tell us how we can help..." required></textarea>
+                </div>
+
+                <button type="submit" class="submitbtn">Submit</button>
+            </form>
+
+        </div>
+
     </section>
 
-    <footer id="contact" class="footer">
+    <!-- FOOTER -->
+    <footer class="footer">
+
         <div class="footercontainer">
+
             <div class="footerprofile">
+
                 <div class="footerlogo">
-                    <img src="logo-footer.png" alt="Albert's Bakeshop Logo" />
+                    <img src="logo-footer.png" alt="Albert's Bakeshop Logo">
                 </div>
+
             </div>
+
             <div class="footerlinks">
+
                 <div class="footercol">
+
                     <h4>QUICK LINKS</h4>
+
                     <ul>
                         <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#menu">Products</a></li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
+
                 </div>
+
                 <div class="footercol">
+
                     <h4>INFORMATION</h4>
+
                     <ul>
-                        <li><p>albertsbakeshop@example.com</p></li>
-                        <li><p>09273748404</p></li>
                         <li>
-                            <p>Mondays to Sundays 9:00 AM to 9:00 PM</p>
+                            <p>albertsbakeshop@example.com</p>
+                        </li>
+
+                        <li>
+                            <p>09273748404</p>
+                        </li>
+
+                        <li>
+                            <p>
+                            <p>Mondays to Sundays <br> 9:00 AM to 9:00 PM</p>
+                            </p>
                         </li>
                     </ul>
+
                 </div>
+
             </div>
+
             <div class="footersocials">
+
                 <h4>OUR SOCIALS</h4>
-                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank" aria-label="Facebook">
+
+                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
                     <img src="facebook.png" alt="Facebook">
                 </a>
+
             </div>
+
         </div>
+
         <div class="footercopyright">
-            <p>© 2024 Albert's Bakeshop. All rights reserved.</p>
+            <p>
+                © 2024 Albert's Bakeshop.
+                All rights reserved.
+            </p>
         </div>
+
     </footer>
 
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
+    <script src="form.js"></script>
+
 </body>
 
 </html>
