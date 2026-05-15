@@ -64,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
         input.oninput = () => input.setCustomValidity("");
     });
 
+    
+
     // =============================
     // FORM SUBMIT - MIN 5 CHARS CHECK
     // =============================
