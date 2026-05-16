@@ -7,8 +7,10 @@
     <title>About | Albert's Bakeshop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="nav-logo.png">
     <link rel="stylesheet" href="style.css" />
@@ -44,16 +46,10 @@
         <span class="drawer-close" onclick="toggleMenu()">✕</span>
         <ul>
             <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="index.html#menu" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="index.html#menu" onclick="toggleMenu()">Shop</a></li>
             <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
             <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
         </ul>
-
-        <div class="drawersocials">
-                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
-                    <img src="facebook.png" alt="Facebook">
-                </a>
-            </div>
     </div>
     <div class="overlay" onclick="toggleMenu()"></div>
 
@@ -61,27 +57,61 @@
 
 
     <section class="herosection" id="home">
-        <div class="heroslides">
-            <div class="slide active" style="background-image: url('cake-hero.png')"></div>
-            <div class="slide" style="background-image: url('cupcake-hero.jpg')"></div>
+        <img src="hero-bg-abt.jpg" alt="background" class="bg-img-abt">
+        <div class="abt-herocontent">
+            <h1 class="abt-herotitle">About Us</h1>
         </div>
-
-        <main>
-
-            <section id="about" class="about">
-
-                <div class="textcontent">
-                    <h2>We are Albert's Bakeshop</h2>
-                    <p style="text-align: justify;">At Albert's bakeshop, we pride ourselves on crafting delightful
-                        delicacies made from the finest ingredients available. Each and every one of our products are
-                        made using artisan techniques to showcase our authentic style. Our passion is to elevate life’s
-                        cherished moments through the kindness of gifting. Make a personalized statement with Albert,
-                        and
-                        celebrate with grace. There’s a cake for every occasion!</p>
-                </div>
-            </section>
-        </main>
     </section>
+
+    <section id="about" class="about">
+
+        <div class="ourstory">
+            <h2>Our Story</h2>
+            <p>It started the way most great things do — with passion, a little flour, and
+                a whole lot of heart.<br><br>In 2022, Albert's Bakeshop opened its doors along Sgt. P. Bernardo, Brgy.
+                Caniogan, Pasig City, with
+                nothing more than a dream to create cakes that people would remember long after the last slice was
+                gone.<br><br>
+                What began as a humble neighborhood bakeshop quickly became a staple in the community. Families came for
+                the cakes, but kept coming back for the feeling — the warmth of knowing that every order was made with
+                intention, every detail handled with care.<br><br>
+                We believe that a cake is never just a cake. It is a centerpiece at your child's first birthday, the
+                sweetest part of your wedding day, the surprise that makes someone feel truly seen. That is what drives
+                us — not just to bake, but to be part of the moments that matter most to you.<br><br>
+                Three years in, and our love for the craft has only grown stronger. We remain proudly rooted in Pasig,
+                serving every occasion with the same dedication we had on day one.<br><br>
+                Albert's Bakeshop. Baked with love, made for you.</p>
+        </div>
+    </section>
+
+
+    <section class="testimonials-section">
+        <h2 class="section-title">Our Wall of Love</h2>
+
+        <div class="cards-grid">
+
+            <div class="card">
+                <p class="quote">"Thank you po! Ang ganda po ng cake and masarap din po yung cupcake.. medyo nabitin pa
+                    nga."</p>
+                <div class="divider"></div>
+                <p class="client-name">Anonymous</p>
+            </div>
+
+            <div class="card">
+                <p class="quote">"Superb! Ang ganda ng cake!"</p>
+                <div class="divider"></div>
+                <p class="client-name">Ms. Hamydha De Luna</p>
+            </div>
+
+            <div class="card">
+                <p class="quote">"Salamat ng madami, Foods masarap at yung set up ang ganda. Till next time!"</p>
+                <div class="divider"></div>
+                <p class="client-name">Mr. Rio Eden</p>
+            </div>
+
+        </div>
+    </section>
+
 
     <footer id="contact" class="footer">
         <div class="footercontainer">
