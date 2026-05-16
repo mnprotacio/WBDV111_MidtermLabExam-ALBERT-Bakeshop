@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const message = document.querySelector('textarea');
     const phone = document.querySelector('input[placeholder*="9XX XXX XXXX"]');
 
-    //MINIMUM 5 CHARS
-    //LETTERS ONLY
+    // =============================
+    // NAME INPUT - LETTERS ONLY + MIN 5 CHARS CHECK
+    // =============================
     name.addEventListener("input", function () {
         this.value = this.value.replace(/[^a-zA-Z\s]/g, "");
     });
@@ -20,31 +21,37 @@ document.addEventListener("DOMContentLoaded", function () {
             name.setCustomValidity("Please fill this field.");
         } else if (trimmedName.length < 5) {
             name.setCustomValidity("Name must be at least 5 characters.");
+        } else if (trimmedName.length > 50) {
+            name.setCustomValidity("Name must be at most 50 characters.");
         } else {
             name.setCustomValidity("Name must contain letters only.");
         }
     };
 
     // =============================
-    // PHONE: +63 format
+    // 09 PHONE FORMAT CHECK
     // =============================
     phone.addEventListener("input", function () {
-        let numbers = this.value.replace(/[^\d+]/g, "");
+        let numbers = this.value.replace(/[^0-9]/g, "");
 
-        if (numbers.length > 0 && !numbers.startsWith("+63")) {
-            numbers = "+63" + numbers.replace(/^\+?63/, "");
+        if (numbers.length > 0 && !numbers.startsWith("09")) {
+            numbers = "09" + numbers.replace(/^0+/, "");
         }
 
-        numbers = numbers.slice(0, 13);
-        this.value = numbers;
+        numbers = numbers.slice(0, 11);
+
+        let formatted = "";
+        if (numbers.length > 0) formatted = numbers.substring(0, 4);
+        if (numbers.length >= 5) formatted += "-" + numbers.substring(4, 7);
+        if (numbers.length >= 8) formatted += "-" + numbers.substring(7, 11);
+
+        this.value = formatted;
         phone.setCustomValidity("");
     });
 
     // =============================
     // CUSTOM VALIDATION MESSAGES
     // =============================
-    subject.oninvalid = () =>
-        subject.setCustomValidity("Please complete this field");
 
     message.oninvalid = () =>
         message.setCustomValidity("Please complete this field");
@@ -57,6 +64,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
+    // DATE PICKER - show/hide based on select
+    const datePickerGroup = document.getElementById('datePickerGroup');
+    const preferredDate = document.getElementById('preferredDate');
+
+    // set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    preferredDate.setAttribute('min', today);
+
+    subject.addEventListener('change', () => {
+        const val = subject.value;
+        if (val === 'Customized Cakes' || val === 'Reservations') {
+            datePickerGroup.style.display = 'flex';
+            preferredDate.required = true;
+        } else {
+            datePickerGroup.style.display = 'none';
+            preferredDate.required = false;
+            preferredDate.value = '';
+        }
+    });
+
     // =============================
     // RESET VALIDATION ON INPUT
     // =============================
@@ -64,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input.oninput = () => input.setCustomValidity("");
     });
 
-    
+
 
     // =============================
     // FORM SUBMIT - MIN 5 CHARS CHECK
@@ -81,7 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // NAME STRICT CHECK (MINIMUM 5 CHARS + letters only)
         const trimmedName = name.value.trim();
         if (trimmedName.length < 5) {
-            name.setCustomValidity("Full name must be at least 5 characters (e.g. 'John Doe').");
+            name.setCustomValidity("Full name must be at least 5 characters (e.g. 'Mart Khervin Protacio').");
+            name.reportValidity();
+            return;
+        }
+        if (trimmedName.length > 50) {
+            name.setCustomValidity("Full name must be at most 50 characters (e.g. 'Lance').");
             name.reportValidity();
             return;
         }
@@ -94,23 +126,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // EMAIL STRICT CHECK
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail|yahoo)\.com$/;
         if (!emailRegex.test(email.value)) {
-            email.setCustomValidity("Please include a valid email address.");
+            email.setCustomValidity("Please enter a valid Gmail or Yahoo address.");
             email.reportValidity();
             return;
         }
 
-        // PHONE STRICT CHECK
-        if (phone.value.length !== 13 || !phone.value.startsWith('+63')) {
-            phone.setCustomValidity("Phone must be +639XXXXXXXXX format");
-            phone.reportValidity();
+        // DISCUSSION CHECK
+        const selectValue = subject.value;
+        if (!selectValue || selectValue.trim() === '') {
+            subject.setCustomValidity('You must select a subject.');
+            subject.reportValidity();
             return;
         }
 
         form.reset();
+        openModal();
+    });
 
-        //add modal popup here
+    // ============================
+    // MODAL
+    // ============================
+    window.openModal = function () {
+        document.getElementById("modalBackdrop").classList.add("open");
+    };
+
+    window.closeModal = function () {
+        document.getElementById("modalBackdrop").classList.remove("open");
+    };
+
+    // close modal on backdrop click
+    document.getElementById("modalBackdrop").addEventListener("click", function (e) {
+        if (e.target === this) closeModal();
     });
 
 });
