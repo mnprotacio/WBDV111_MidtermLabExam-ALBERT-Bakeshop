@@ -64,9 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    // DATE PICKER - show/hide based on select
+    // DATE & TIME PICKER - show/hide based on select
     const datePickerGroup = document.getElementById('datePickerGroup');
+    const timePickerGroup = document.getElementById('conditional-time');
     const preferredDate = document.getElementById('preferredDate');
+    const preferredTime = document.getElementById('preferredTime');
 
     // set minimum date to today
     const today = new Date().toISOString().split('T')[0];
@@ -76,11 +78,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const val = subject.value;
         if (val === 'Customized Cakes' || val === 'Reservations') {
             datePickerGroup.style.display = 'flex';
+            timePickerGroup.style.display = 'flex';
             preferredDate.required = true;
+            preferredTime.required = true;
         } else {
             datePickerGroup.style.display = 'none';
+            timePickerGroup.style.display = 'none';
             preferredDate.required = false;
+            preferredTime.required = false;
             preferredDate.value = '';
+            preferredTime.value = '';
         }
     });
 
@@ -143,6 +150,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         form.reset();
         openModal();
+
+        datePickerGroup.style.display = 'none';
+        preferredDate.required = false;
     });
 
     // ============================
