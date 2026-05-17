@@ -1,3 +1,16 @@
+nav {
+  position: relative;
+}
+
+.navlinks {
+  position: absolute;
+  left: 52%;
+  transform: translateX(-50%);
+}
+
+
+
+
 /* GALLERY HERO */
 .gallerypage .herosection {
     width: 100%;
