@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Libre Bodoni', sans-serif;
   background-color: #fff;
   min-height: 100vh;
   display: flex;
@@ -31,11 +31,17 @@ header {
 }
 
 nav {
+  pointer-events: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
-  background-image: linear-gradient(to right, #3E2723, #6F4E37);
-  z-index: 1000;
+  background: rgba(30, 20, 15, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 999px;
+  padding: 10px 24px 10px 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .navlogo {
@@ -66,6 +72,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
+  text-transform: uppercase;
   letter-spacing: 1.3px;
   color: #F5F0E0;
 
@@ -96,13 +103,13 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  background-image: linear-gradient(to right, #3E2723, #6F4E37);
+  background: rgba(30, 20, 15, 0.85);
+  backdrop-filter: blur(12px);
   list-style: none;
   padding: 8px 0;
   margin: 0;
   min-width: 160px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  border-radius: 999px;
   z-index: 9999;
   transform: translateY(-6px);
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
@@ -119,7 +126,6 @@ nav {
   display: block;
   padding: 10px 20px;
   color: #F5F0E0;
-  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 0.9rem;
   text-decoration: none;
@@ -127,7 +133,9 @@ nav {
 }
 
 .dropdown-menu li a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+
 }
 
 .hamburger {
@@ -238,8 +246,12 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 80px;
+  padding: 0 80px 60px;
   opacity: 0;
+  top: 340px;
+  bottom: 0;
+  left: 0;
+  right: auto;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
   pointer-events: none;
@@ -252,7 +264,6 @@ nav {
 }
 
 .herobtn {
-  font-family: 'Libre Bodoni', serif;
   margin-top: 20px;
   padding: 14px 28px;
   background-image: linear-gradient(to right, #3E2723, #6F4E37);
@@ -271,10 +282,10 @@ nav {
 }
 
 .herocontent h1 {
-  font-family: 'Libre Bodoni', serif;
-  font-size: clamp(40px, 7vw, 72px);
+  font-size: clamp(2.5rem, 7vw, 5rem);
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
 }
 
 .herotitle {
@@ -350,7 +361,6 @@ nav {
   width: 100%;
   text-align: center;
   padding: 40px 60px 0;
-  font-family: 'Libre Bodoni', serif;
   font-size: 2rem;
   color: #3E2723;
   margin: 0;
@@ -418,7 +428,6 @@ nav {
   background-image: linear-gradient(to right, #3E2723, #6F4E37);
   color: #fff;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -487,7 +496,6 @@ nav {
 }
 
 .abt-herotitle {
-  font-family: 'Libre Bodoni', serif;
   font-size: clamp(40px, 6vw, 72px);
   font-weight: 700;
   color: #f5e0e0;
@@ -497,7 +505,6 @@ nav {
 }
 
 .about {
-  font-family: 'Libre Bodoni', serif;
   position: relative;
   z-index: 10;
   background-color: #ffffff;
