@@ -1,351 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Albert's Bakeshop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="nav-logo.png">
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Albert's Bakeshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="nav-logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav class="nav">
-            <a href="index.html" class="navlogo">
-                <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
-            </a>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="navlogo">
+        <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
+      </a>
+      <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html#menu">Menu</a>
+          <ul class="dropdown-menu">
+            <li><a href="gallery.html">All Cakes</a></li>
+          </ul>
+        </li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+      </ul>
+      <div class="nav-spacer"></div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
 
-            <ul class="navlinks">
-                <li><a href="index.html">Home</a></li>
-                <li class="nav-dropdown">
-                    <a href="index.html#menu">Menu</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="gallery.html">All Cakes</a></li>
-                    </ul>
-                </li>
-                <li><a href="about-us.html">About</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
-        </nav>
-    </header>
+  <div class="hamburgerdrawer">
+    <span class="drawer-close" onclick="toggleMenu()">✕</span>
+    <ul>
+      <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+      <li><a href="gallery.html" onclick="toggleMenu()">Menu</a></li>
+      <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
+      <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
+  <div class="overlay" onclick="toggleMenu()"></div>
 
-    <!-- MOBILE DRAWER -->
-    <div class="hamburgerdrawer">
+  <!-- CONTACT -->
+  <section class="contactsection">
 
-        <span class="drawer-close" onclick="toggleMenu()">✕</span>
+    <div class="contactinfo">
+      <span class="contacttag">CONTACT US</span>
+      <h1>GET IN TOUCH!</h1>
+      <p class="contactdesc">Have questions about our cakes, customized orders, reservations, or event bookings? Fill out the form and our Albert's Bakeshop team will reach out to you.</p>
 
-        <ul>
-            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="gallery.html" onclick="toggleMenu()">Shop</a></li>
-            <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
-            <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
-        </ul>
-
-    </div>
-    <div class="overlay" onclick="toggleMenu()"></div>
-
-
-
-    <!-- CONTACT SECTION -->
-    <section class="contactsection">
-
-        <!-- LEFT SIDE -->
-        <div class="contactinfo">
-
-            <span class="contacttag">
-                CONTACT US
-            </span>
-
-            <h1>GET IN TOUCH!</h1>
-
-            <p class="contactdesc">
-                Have questions about our cakes, customized orders,
-                reservations, or event bookings?
-                Fill out the form and our Albert’s Bakeshop
-                team will reach out to you.
-            </p>
-
-            <div class="contactdetails">
-
-                <div class="detailbox">
-                    <h3>OUR LOCATION</h3>
-                    <p>Sgt. P Bernardo, Brgy. Caniogan,<br>Pasig, Philippines</p>
-                </div>
-
-                <div class="detailbox">
-                    <h3>PHONE NUMBER</h3>
-                    <p>0927 374 8404</p>
-                </div>
-
-                <div class="detailbox">
-                    <h3>EMAIL ADDRESS</h3>
-                    <p>albertsbakeshop@example.com</p>
-                </div>
-
-                <div class="detailbox">
-                    <h3>BUSINESS HOURS</h3>
-                    <p>Monday - Sunday <br>9:00 AM - 10:00 PM</p>
-                </div>
-
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.3!2d121.075!3d14.578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSgt.+P.+Bernardo+Pasig!5e0!3m2!1sen!2sph!4v1"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-
-            </div>
-
-            <!-- FORM SOCIALS -->
-            <div class="contactsocials">
-                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
-                    <img src="facebook.png" alt="Facebook">
-                </a>
-            </div>
-
+      <div class="contactdetails">
+        <div class="detailbox">
+          <h3>OUR LOCATION</h3>
+          <p>Sgt. P Bernardo, Brgy. Caniogan,<br>Pasig, Philippines</p>
         </div>
-
-        <!-- RIGHT SIDE FORM-->
-        <div class="contactformwrapper">
-
-            <form class="contactform">
-
-                <div class="formgroup">
-                    <label>Full Name *</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                            <circle cx="12" cy="7" r="4" />
-                        </svg>
-                        <input type="text" id="fullname" placeholder="Please enter your full name" required>
-                    </div>
-                </div>
-
-                <!-- Email -->
-                <div class="formgroup">
-                    <label>Email Address *</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <rect x="2" y="4" width="20" height="16" rx="2" />
-                            <path d="M2 7l10 7 10-7" />
-                        </svg>
-                        <input type="email" id="email" placeholder="albertsbakeshop@example.com" required>
-                    </div>
-                </div>
-
-                <!-- Phone -->
-                <div class="formgroup">
-                    <label>Phone Number (optional)</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <path
-                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-                        </svg>
-                        <input type="text" id="phone" placeholder="e.g. 0927 374 8404">
-                    </div>
-                </div>
-
-                <!-- DROPDOWN CONTACTFORM -->
-                <div class="formgroup">
-                    <label>What would you like to discuss?</label>
-                    <div class="input-wrapper">
-                        <select required>
-                            <option disabled selected value=""></option>
-                            <option>Customized Cakes</option>
-                            <option>Reservations</option>
-                            <option>General Inquiry</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="formgroup fullwidth">
-                    <label>Address *</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                            <circle cx="12" cy="9" r="2.5" />
-                        </svg>
-                        <input type="text" name="address" placeholder="Enter your full address" required />
-                    </div>
-                </div>
-
-                <!--DATE CONTACT FORM-->
-                <div class="formgroup" id="datePickerGroup" style="display: none;">
-                    <label>Preferred Date *</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <rect x="3" y="4" width="18" height="18" rx="2" />
-                            <path d="M16 2v4M8 2v4M3 10h18" />
-                        </svg>
-                        <input type="date" id="preferredDate" name="preferredDate">
-                    </div>
-                </div>
-
-                <!--TIME CONTACT FORM-->
-                <div class="formgroup" id="conditional-time" style="display:none;">
-                    <label>Preferred Time *</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <circle cx="12" cy="12" r="9" />
-                            <path d="M12 7v5l3 3" />
-                        </svg>
-                        <input type="time" id="preferredTime" name="preferredTime" />
-                    </div>
-                </div>
-
-                <div class="formgroup fullwidth">
-                    <label>Message *</label>
-                    <div class="input-wrapper">
-                        <textarea placeholder="" required></textarea>
-                    </div>
-                </div>
-
-                <button type="submit" class="submitbtn">Submit</button>
-            </form>
-
+        <div class="detailbox">
+          <h3>PHONE NUMBER</h3>
+          <p>0927 374 8404</p>
         </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <div class="footercontainer">
-
-            <div class="footerprofile">
-
-                <div class="footerlogo">
-                    <img src="logo-footer.png" alt="Albert's Bakeshop Logo">
-                </div>
-
-            </div>
-
-            <div class="footerlinks">
-
-                <div class="footercol">
-
-                    <h4>QUICK LINKS</h4>
-
-                    <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#menu">Products</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-
-                </div>
-
-                <div class="footercol">
-
-                    <h4>INFORMATION</h4>
-
-                    <ul>
-                        <li>
-                            <p>albertsbakeshop@example.com</p>
-                        </li>
-
-                        <li>
-                            <p>09273748404</p>
-                        </li>
-
-                        <li>
-                            <p>Mondays to Sundays <br> 9:00 AM to 9:00 PM</p>
-                        </li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-            <div class="footersocials">
-
-                <h4>OUR SOCIALS</h4>
-
-                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
-                    <img src="facebook.png" alt="Facebook">
-                </a>
-
-            </div>
-
+        <div class="detailbox">
+          <h3>EMAIL ADDRESS</h3>
+          <p>albertsbakeshop@example.com</p>
         </div>
-
-        <div class="footercopyright">
-            <p>
-                © 2024 Albert's Bakeshop.
-                All rights reserved.
-            </p>
+        <div class="detailbox">
+          <h3>BUSINESS HOURS</h3>
+          <p>Monday - Sunday<br>9:00 AM - 10:00 PM</p>
         </div>
-
-    </footer>
-
-    <!--MODAL POPUP AFTER CLICKING SUBMIT-->
-    <div class="modal-backdrop" id="modalBackdrop">
-        <div class="modal">
-
-            <button class="modal-close" onclick="closeModal()">✕</button>
-
-            <!-- floating icons background -->
-            <div class="modal-icons-bg">
-                <svg class="float-icon i1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                </svg>
-                <svg class="float-icon i2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="2" y="4" width="20" height="16" rx="2" />
-                    <path d="M2 7l10 7 10-7" />
-                </svg>
-                <svg class="float-icon i3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-                </svg>
-                <svg class="float-icon i4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                    <circle cx="8" cy="10" r="1" fill="currentColor" />
-                    <circle cx="12" cy="10" r="1" fill="currentColor" />
-                    <circle cx="16" cy="10" r="1" fill="currentColor" />
-                </svg>
-                <svg class="float-icon i5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="2" y="4" width="20" height="16" rx="2" />
-                    <path d="M2 7l10 7 10-7" />
-                </svg>
-            </div>
-
-            <!-- main envelope icon -->
-            <div class="modal-envelope">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="2" y="4" width="20" height="16" rx="2" />
-                    <path d="M2 7l10 7 10-7" />
-                </svg>
-            </div>
-
-            <h3>Thank you!</h3>
-            <p>We have received your message. We will reach out to you soon!</p>
-            <button onclick="closeModal()" class="modal-btn">Close</button>
-
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.3!2d121.075!3d14.578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSgt.+P.+Bernardo+Pasig!5e0!3m2!1sen!2sph!4v1"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
+      </div>
+
+      <div class="contactsocials">
+        <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
+          <img src="facebook.png" alt="Facebook">
+        </a>
+      </div>
     </div>
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
-    <script src="form.js"></script>
+    <div class="contactformwrapper">
+      <form class="contactform">
 
+        <div class="formgroup">
+          <label>Full Name *</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+            </svg>
+            <input type="text" id="fullname" placeholder="Please enter your full name" required>
+          </div>
+        </div>
+
+        <div class="formgroup">
+          <label>Email Address *</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
+            </svg>
+            <input type="email" id="email" placeholder="albertsbakeshop@example.com" required>
+          </div>
+        </div>
+
+        <div class="formgroup">
+          <label>Phone Number (optional)</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <input type="text" id="phone" placeholder="e.g. 0927 374 8404">
+          </div>
+        </div>
+
+        <div class="formgroup">
+          <label>What would you like to discuss?</label>
+          <div class="input-wrapper">
+            <select required>
+              <option disabled selected value=""></option>
+              <option>Customized Cakes</option>
+              <option>Reservations</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="formgroup fullwidth">
+          <label>Address *</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            <input type="text" name="address" placeholder="Enter your full address" required />
+          </div>
+        </div>
+
+        <div class="formgroup" id="datePickerGroup" style="display:none;">
+          <label>Preferred Date *</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+            </svg>
+            <input type="date" id="preferredDate" name="preferredDate">
+          </div>
+        </div>
+
+        <div class="formgroup" id="conditional-time" style="display:none;">
+          <label>Preferred Time *</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
+            </svg>
+            <input type="time" id="preferredTime" name="preferredTime" />
+          </div>
+        </div>
+
+        <div class="formgroup fullwidth">
+          <label>Message *</label>
+          <div class="input-wrapper">
+            <textarea placeholder="" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submitbtn">Submit</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footercontainer">
+      <div class="footerprofile">
+        <div class="footerlogo">
+          <img src="logo-footer.png" alt="Albert's Bakeshop Logo">
+        </div>
+      </div>
+      <div class="footerlinks">
+        <div class="footercol">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Products</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footercol">
+          <h4>INFORMATION</h4>
+          <ul>
+            <li><p>albertsbakeshop@example.com</p></li>
+            <li><p>09273748404</p></li>
+            <li><p>Mondays to Sundays<br>9:00 AM to 9:00 PM</p></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footersocials">
+        <h4>OUR SOCIALS</h4>
+        <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank">
+          <img src="facebook.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+    <div class="footercopyright">
+      <p>© 2024 Albert's Bakeshop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-icons-bg">
+        <svg class="float-icon i1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        <svg class="float-icon i2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+        <svg class="float-icon i3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        <svg class="float-icon i4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><circle cx="8" cy="10" r="1" fill="currentColor"/><circle cx="12" cy="10" r="1" fill="currentColor"/><circle cx="16" cy="10" r="1" fill="currentColor"/></svg>
+        <svg class="float-icon i5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+      </div>
+      <div class="modal-envelope">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
+        </svg>
+      </div>
+      <h3>Thank you!</h3>
+      <p>We have received your message. We will reach out to you soon!</p>
+      <button onclick="closeModal()" class="modal-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="form.js"></script>
 </body>
-
 </html>
