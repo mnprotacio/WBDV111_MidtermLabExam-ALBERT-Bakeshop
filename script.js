@@ -86,3 +86,15 @@ if (track && dotsContainer) {
     goTo(current + dir);
   };
 }
+
+// FILTERBAR CHOICES LOGIC
+function filterGallery(tag) {
+    const items = document.querySelectorAll('.galleryitem');
+    items.forEach(item => {
+        if (tag === 'all' || item.dataset.tag === tag) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
