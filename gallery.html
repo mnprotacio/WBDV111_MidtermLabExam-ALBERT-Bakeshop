@@ -7,12 +7,11 @@
     <title>Gallery | Albert's Bakeshop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="nav-logo.png">
+    
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="gallery.css" />
 </head>
@@ -24,7 +23,6 @@
             <a href="index.html" class="navlogo">
                 <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
             </a>
-
             <ul class="navlinks">
                 <li><a href="index.html">Home</a></li>
                 <li class="nav-dropdown">
@@ -44,14 +42,12 @@
         <span class="drawer-close" onclick="toggleMenu()">✕</span>
         <ul>
             <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="gallery.html" onclick="toggleMenu()">Shop</a></li>
+            <li><a href="index.html#menu" onclick="toggleMenu()">Menu</a></li>
             <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
             <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
         </ul>
     </div>
     <div class="overlay" onclick="toggleMenu()"></div>
-
-
 
     <!-- HERO -->
     <section class="herosection" id="home">
@@ -61,97 +57,175 @@
         </div>
     </section>
 
-
     <!-- GALLERY -->
     <section class="gallery-section">
-        <h2>All Our Cakes</h2>
 
-        <div class="gallery-filterbar">
-            <select id="galleryFilter" onchange="filterGallery(this.value)">
-                <option value="all">All</option>
-                <option value="birthday">Birthday</option>
-                <option value="wedding">Wedding</option>
-                <option value="gender-reveal">Gender Reveal</option>
-                <option value="holiday">Holiday & Seasonal</option>
-            </select>
+        <!-- BIRTHDAY -->
+        <div class="gallery-category" id="birthday">
+            <div class="gallery-category-header">
+                <h2>Birthday Cakes</h2>
+                <p>Celebrate every year with a cake as special as the moment.</p>
+            </div>
+            <div class="gallerygrid">
+
+                <div class="galleryitem">
+                    <img src="heart-minicake.jpg" alt="Heart Mini Cake">
+                    <div class="galleryitem-info">
+                        <p>Valentine's Special</p>
+                        <span>starts at ₱899</span>
+                    </div>
+                </div>
+
+                <div class="galleryitem">
+                    <img src="music-cake.png" alt="Music Cake">
+                    <div class="galleryitem-info">
+                        <p>Disco Cake</p>
+                        <span>starts at ₱1,199</span>
+                    </div>
+                </div>
+
+                <div class="galleryitem">
+                    <img src="crown-cake.jpg" alt="Crown Cake">
+                    <div class="galleryitem-info">
+                        <p>Crowned Cake</p>
+                        <span>starts at ₱1,499</span>
+                    </div>
+                </div>
+
+                <div class="galleryitem">
+                    <img src="blueyandbingo.jpg" alt="Bluey with Bingo">
+                    <div class="galleryitem-info">
+                        <p>Bluey with Bingo</p>
+                        <span>starts at ₱1,299</span>
+                    </div>
+                </div>
+
+                <div class="galleryitem">
+                    <img src="pink-royalty.jpg" alt="Pink Royalty">
+                    <div class="galleryitem-info">
+                        <p>Pink Blush</p>
+                        <span>starts at ₱1,899</span>
+                    </div>
+                </div>
+
+                <div class="galleryitem">
+                    <img src="crown-cake.jpg" alt="Crown Cake">
+                    <div class="galleryitem-info">
+                        <p>Royal Tiara</p>
+                        <span>starts at ₱1,499</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <div class="gallerygrid">
-            <div class="galleryitem">
-                <img src="heart-minicake.jpg" alt="Heart Mini Cake">
-                <div class="galleryitem-info">
-                    <p>Valentine's Special</p>
-                    <span>starts at ₱899</span>
-                </div>
+        <!-- WEDDING -->
+        <div class="gallery-category" id="wedding">
+            <div class="gallery-category-header">
+                <h2>Wedding Cakes</h2>
+                <p>Elegant centerpieces for your most cherished day.</p>
             </div>
+            <div class="gallerygrid">
 
-            <div class="galleryitem">
-                <img src="music-cake.png" alt="Music Cake">
-                <div class="galleryitem-info">
-                    <p>Disco Cake</p>
-                    <span>starts at ₱1199</span>
+                <div class="galleryitem">
+                    <img src="heart-minicake.jpg" alt="Heart Mini Cake">
+                    <div class="galleryitem-info">
+                        <p>Classic White Tier</p>
+                        <span>starts at ₱3,499</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="galleryitem">
-                <img src="crown-cake.jpg" alt="Crown Cake">
-                <div class="galleryitem-info">
-                    <p>Crowned Cake</p>
-                    <span>starts at ₱1499</span>
+                <div class="galleryitem">
+                    <img src="pink-royalty.jpg" alt="Pink Royalty">
+                    <div class="galleryitem-info">
+                        <p>Rose Gold Floral</p>
+                        <span>starts at ₱4,199</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="galleryitem">
-                <img src="blueyandbingo.jpg" alt="Bluey with Bingo">
-                <div class="galleryitem-info">
-                    <p>Bluey with Bingo</p>
-                    <span>starts at ₱1299</span>
+                <div class="galleryitem">
+                    <img src="crown-cake.jpg" alt="Crown Cake">
+                    <div class="galleryitem-info">
+                        <p>Ivory Lace Tier</p>
+                        <span>starts at ₱3,899</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="galleryitem">
-                <img src="pink-royalty.jpg" alt="Pink Royalty">
-                <div class="galleryitem-info">
-                    <p>Pink Blush</p>
-                    <span>starts at ₱1899</span>
+            </div>
+        </div>
+
+        <!-- GENDER REVEAL -->
+        <div class="gallery-category" id="gender-reveal">
+            <div class="gallery-category-header">
+                <h2>Gender Reveal Cakes</h2>
+                <p>Make the big announcement even sweeter.</p>
+            </div>
+            <div class="gallerygrid">
+
+                <div class="galleryitem">
+                    <img src="heart-minicake.jpg" alt="Heart Mini Cake">
+                    <div class="galleryitem-info">
+                        <p>Pink Surprise</p>
+                        <span>starts at ₱1,299</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="galleryitem">
-                <img src="heart-minicake.jpg" alt="Heart Mini Cake">
-                <div class="galleryitem-info">
-                    <p>Valentine's Special</p>
-                    <span>starts at ₱899</span>
+                <div class="galleryitem">
+                    <img src="blueyandbingo.jpg" alt="Blue Reveal">
+                    <div class="galleryitem-info">
+                        <p>Blue Confetti Burst</p>
+                        <span>starts at ₱1,299</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="galleryitem">
-                <img src="music-cake.png" alt="Music Cake">
-                <div class="galleryitem-info">
-                    <p>Disco Cake</p>
-                    <span>starts at ₱1199</span>
+                <div class="galleryitem">
+                    <img src="music-cake.png" alt="Gender Reveal">
+                    <div class="galleryitem-info">
+                        <p>He or She?</p>
+                        <span>starts at ₱1,499</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="galleryitem">
-                <img src="crown-cake.jpg" alt="Crown Cake">
-                <div class="galleryitem-info">
-                    <p>Crowned Cake</p>
-                    <span>starts at ₱1499</span>
+            </div>
+        </div>
+
+        <!-- HOLIDAY & SEASONAL -->
+        <div class="gallery-category" id="holiday">
+            <div class="gallery-category-header">
+                <h2>Holiday & Seasonal Cakes</h2>
+                <p>Festive flavors for every season and celebration.</p>
+            </div>
+            <div class="gallerygrid">
+
+                <div class="galleryitem">
+                    <img src="crown-cake.jpg" alt="Christmas Cake">
+                    <div class="galleryitem-info">
+                        <p>Christmas Special</p>
+                        <span>starts at ₱1,599</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="galleryitem">
-                <img src="blueyandbingo.jpg" alt="Bluey with Bingo">
-                <div class="galleryitem-info">
-                    <p>Bluey with Bingo</p>
-                    <span>starts at ₱1299</span>
+                <div class="galleryitem">
+                    <img src="pink-royalty.jpg" alt="Valentine Cake">
+                    <div class="galleryitem-info">
+                        <p>Valentine's Blush</p>
+                        <span>starts at ₱1,199</span>
+                    </div>
                 </div>
-            </div>
 
+                <div class="galleryitem">
+                    <img src="heart-minicake.jpg" alt="Holiday Cake">
+                    <div class="galleryitem-info">
+                        <p>Holiday Cheer</p>
+                        <span>starts at ₱1,399</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <a href="contact-us.html" class="gallery-btn">Want Customized Cakes?</a>
+
     </section>
 
     <!-- TESTIMONIALS -->
