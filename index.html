@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="nav-logo.png">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="homepage">
@@ -25,7 +25,12 @@
 
             <ul class="navlinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#menu">Menu</a></li>
+                <li class="nav-dropdown">
+                    <a href="index.html#menu">Menu</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html">All Cakes</a></li>
+                    </ul>
+                </li>
                 <li><a href="about-us.html">About</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
             </ul>
@@ -105,7 +110,7 @@
             </div>
 
             <div class="menucontainer">
-                <img src="pink-royalty.png" alt="Pink Royalty">
+                <img src="pink-royalty.jpg" alt="Pink Royalty">
                 <div class="menuiteminfo">
                     <p class="menuitemname">Pink Blush</p>
                     <p class="menuitemprice">starts at ₱1899</p>
@@ -135,8 +140,11 @@
                     <p class="menuitemprice">starts at ₱1499</p>
                 </div>
             </div>
-
         </div>
+        <a href="gallery.html" class="viewmore-btn">View More</a>
+    </section>
+
+    </div>
 
     </section>
 
@@ -182,9 +190,6 @@
                 <h4>OUR SOCIALS</h4>
                 <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank" aria-label="Facebook">
                     <img src="facebook.png" alt="Facebook">
-                </a>
-                <a href="https://www.tiktok.com/@alberts.bakeshop" target="_self">
-                    <img src="tiktok-logo.png" alt="TikTok">
                 </a>
             </div>
 
