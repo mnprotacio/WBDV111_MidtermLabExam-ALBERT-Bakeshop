@@ -1,146 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Albert's Bakeshop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="nav-logo.png">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Albert's Bakeshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="nav-logo.png">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="aboutpage">
 
-    <!--NAV-->
-    <header>
-        <nav class="nav">
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="navlogo">
+        <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
+      </a>
+      <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html#menu">Menu</a>
+          <ul class="dropdown-menu">
+            <li><a href="gallery.html">All Cakes</a></li>
+          </ul>
+        </li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="contact-us.html">Contact</a></li>
+      </ul>
+      <div class="nav-spacer"></div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
 
-            <a href="index.html" class="navlogo">
-                <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
-            </a>
+  <div class="hamburgerdrawer">
+    <span class="drawer-close" onclick="toggleMenu()">✕</span>
+    <ul>
+      <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+      <li><a href="gallery.html" onclick="toggleMenu()">Menu</a></li>
+      <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
+      <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+  </div>
+  <div class="overlay" onclick="toggleMenu()"></div>
 
-            <ul class="navlinks">
-                <li><a href="index.html">Home</a></li>
-                <li class="nav-dropdown">
-
-                    <a href="index.html#menu">Menu</a>
-
-                    <ul class="dropdown-menu">
-                        <li><a href="gallery.html">All Cakes</a></li>
-                    </ul>
-
-                </li>
-                <li><a href="about-us.html">About</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-            </ul>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
-        </nav>
-    </header>
-    
-
-    <!--HAMBURGER POPUP WHEN CLICKED -->
-    <div class="hamburgerdrawer">
-
-        <span class="drawer-close" onclick="toggleMenu()">✕</span>
-
-        <ul>
-            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-            <li><a href="gallery.html" onclick="toggleMenu()">Shop</a></li>
-            <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
-            <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
-        </ul>
-
+  <!-- HERO -->
+  <section class="herosection">
+    <img src="about-hero.jpg" alt="About Hero" class="about-hero">
+    <div class="abt-herocontent">
+      <h1 class="abt-herotitle">About Us</h1>
     </div>
-    <div class="overlay" onclick="toggleMenu()"></div>
+  </section>
 
+  <!-- STORY -->
+  <section class="about">
+    <div class="ourstory">
+      <h2>Our Story</h2>
+      <p>It started the way most great things do — with passion, a little flour, and a whole lot of heart.<br><br>
+        In 2022, Albert's Bakeshop opened its doors along Sgt. P. Bernardo, Brgy. Caniogan, Pasig City, with nothing more than a dream to create cakes that people would remember long after the last slice was gone.<br><br>
+        What began as a humble neighborhood bakeshop quickly became a staple in the community. Families came for the cakes, but kept coming back for the feeling — the warmth of knowing that every order was made with intention, every detail handled with care.<br><br>
+        We believe that a cake is never just a cake. It is a centerpiece at your child's first birthday, the sweetest part of your wedding day, the surprise that makes someone feel truly seen. That is what drives us — not just to bake, but to be part of the moments that matter most to you.<br><br>
+        Three years in, and our love for the craft has only grown stronger. We remain proudly rooted in Pasig, serving every occasion with the same dedication we had on day one.<br><br>
+        Albert's Bakeshop. Baked with love, made for you.</p>
+    </div>
+  </section>
 
-
-
-    <section class="herosection" id="home">
-
-        <img src="about-hero.jpg" alt="background" class="about-hero">
-
-        <div class="abt-herocontent">
-            
-            <h1 class="abt-herotitle">About Us</h1>
-            
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footercontainer">
+      <div class="footerprofile">
+        <div class="footerlogo">
+          <img src="logo-footer.png" alt="Albert's Bakeshop Logo" />
         </div>
-
-    </section>
-
-    <section id="about" class="about">
-
-        <div class="ourstory">
-            <h2>Our Story</h2>
-            <p>It started the way most great things do — with passion, a little flour, and
-                a whole lot of heart.<br><br>In 2022, Albert's Bakeshop opened its doors along Sgt. P. Bernardo, Brgy.
-                Caniogan, Pasig City, with
-                nothing more than a dream to create cakes that people would remember long after the last slice was
-                gone.<br><br>
-                What began as a humble neighborhood bakeshop quickly became a staple in the community. Families came for
-                the cakes, but kept coming back for the feeling — the warmth of knowing that every order was made with
-                intention, every detail handled with care.<br><br>
-                We believe that a cake is never just a cake. It is a centerpiece at your child's first birthday, the
-                sweetest part of your wedding day, the surprise that makes someone feel truly seen. That is what drives
-                us — not just to bake, but to be part of the moments that matter most to you.<br><br>
-                Three years in, and our love for the craft has only grown stronger. We remain proudly rooted in Pasig,
-                serving every occasion with the same dedication we had on day one.<br><br>
-                Albert's Bakeshop. Baked with love, made for you.</p>
+      </div>
+      <div class="footerlinks">
+        <div class="footercol">
+          <h4>QUICK LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Our Products</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
         </div>
-    </section>
-
-    <footer id="contact" class="footer">
-        <div class="footercontainer">
-            <div class="footerprofile">
-                <div class="footerlogo">
-                    <img src="logo-footer.png" alt="Albert's Bakeshop Logo" />
-                </div>
-            </div>
-            <div class="footerlinks">
-                <div class="footercol">
-                    <h4>QUICK LINKS</h4>
-                    <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#menu">Products</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footercol">
-                    <h4>INFORMATION</h4>
-                    <ul>
-                        <li>
-                            <p>albertsbakeshop@example.com</p>
-                        </li>
-                        <li>
-                            <p>09273748404</p>
-                        </li>
-                        <li>
-                            <p>Mondays to Sundays <br> 9:00 AM to 9:00 PM</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footersocials">
-                <h4>OUR SOCIALS</h4>
-                <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank" aria-label="Facebook">
-                    <img src="facebook.png" alt="Facebook">
-                </a>
-            </div>
+        <div class="footercol">
+          <h4>INFORMATION</h4>
+          <ul>
+            <li><p>albertsbakeshop@example.com</p></li>
+            <li><p>09273748404</p></li>
+            <li><p>Mondays to Sundays<br>9:00 AM to 9:00 PM</p></li>
+          </ul>
         </div>
-        <div class="footercopyright">
-            <p>© 2024 Albert's Bakeshop. All rights reserved.</p>
-        </div>
-    </footer>
+      </div>
+      <div class="footersocials">
+        <h4>OUR SOCIALS</h4>
+        <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank" aria-label="Facebook">
+          <img src="facebook.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+    <div class="footercopyright">
+      <p>© 2024 Albert's Bakeshop. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
