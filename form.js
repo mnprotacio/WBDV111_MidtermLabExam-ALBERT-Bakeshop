@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.querySelector('input[type="email"]');
     const subject = document.querySelector('select');
     const message = document.querySelector('textarea');
-    const phone = document.querySelector('input[placeholder*="9XX XXX XXXX"]');
+    const phone = document.querySelector('input[placeholder*="927 374 8404"]');
 
     // =============================
     // NAME INPUT - LETTERS ONLY + MIN 5 CHARS CHECK
