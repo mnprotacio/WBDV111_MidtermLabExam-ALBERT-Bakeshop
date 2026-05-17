@@ -29,7 +29,12 @@
 
             <ul class="navlinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#menu">Menu</a></li>
+                <li class="nav-dropdown">
+                    <a href="index.html#menu">Menu</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html">All Cakes</a></li>
+                    </ul>
+                </li>
                 <li><a href="about-us.html">About</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
             </ul>
@@ -130,7 +135,7 @@
                             <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                             <circle cx="12" cy="7" r="4" />
                         </svg>
-                        <input type="text" id="fullname" placeholder="e.g. Mart Protacio" required>
+                        <input type="text" id="fullname" placeholder="Please enter your full name" required>
                     </div>
                 </div>
 
@@ -143,7 +148,7 @@
                             <rect x="2" y="4" width="20" height="16" rx="2" />
                             <path d="M2 7l10 7 10-7" />
                         </svg>
-                        <input type="email" id="email" placeholder="example@gmail.com" required>
+                        <input type="email" id="email" placeholder="albertsbakeshop@example.com" required>
                     </div>
                 </div>
 
@@ -156,11 +161,11 @@
                             <path
                                 d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                         </svg>
-                        <input type="text" id="phone" placeholder="09XX XXX XXXX" required>
+                        <input type="text" id="phone" placeholder="e.g. 09XX XXX XXXX" required>
                     </div>
                 </div>
 
-                <!-- Dropdown -->
+                <!-- DROPDOWN CONTACTFORM -->
                 <div class="formgroup">
                     <label>What would you like to discuss?</label>
                     <div class="input-wrapper">
@@ -173,7 +178,8 @@
                     </div>
                 </div>
 
-                <div class="formgroup fullwidth" id="datePickerGroup" style="display: none;">
+                <!--DATE CONTACT FORM-->
+                <div class="formgroup" id="datePickerGroup" style="display: none;">
                     <label>Preferred Date *</label>
                     <div class="input-wrapper">
                         <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -182,6 +188,19 @@
                             <path d="M16 2v4M8 2v4M3 10h18" />
                         </svg>
                         <input type="date" id="preferredDate" name="preferredDate">
+                    </div>
+                </div>
+
+                <!--TIME CONTACT FORM-->
+                <div class="formgroup" id="conditional-time" style="display:none;">
+                    <label>Preferred Time *</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M12 7v5l3 3" />
+                        </svg>
+                        <input type="time" id="preferredTime" name="preferredTime" />
                     </div>
                 </div>
 
