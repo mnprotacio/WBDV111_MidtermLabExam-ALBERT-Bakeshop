@@ -51,3 +51,38 @@ function toggleMenu() {
   document.querySelector(".overlay").classList.toggle("open");
   document.body.classList.toggle("menu-open");
 }
+
+
+//VIEWALL GALLERY CAROUSEL TESTIMONIALS
+const track = document.getElementById('carouselTrack');
+const dotsContainer = document.getElementById('carouselDots');
+
+if (track && dotsContainer) {
+  const cards = track.querySelectorAll('.card');
+  const CARD_WIDTH = 220;
+  const GAP = 20;
+  const visible = window.innerWidth <= 768 ? 1 : 3;
+  const max = Math.max(0, cards.length - visible);
+  let current = 0;
+
+  dotsContainer.innerHTML = '';
+  for (let i = 0; i <= max; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, max));
+    track.style.transform = `translateX(-${current * (CARD_WIDTH + GAP)}px)`;
+    document.querySelectorAll('#carouselDots .dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  window.moveCarousel = function(dir) {
+    goTo(current + dir);
+  };
+}
