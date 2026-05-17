@@ -1,3 +1,4 @@
+/*
 const slides = document.querySelectorAll('.slide');
 const contents = document.querySelectorAll('.herocontent');
 
@@ -24,6 +25,7 @@ if (slides.length > 0) {
 
   setInterval(nextSlide, 5000);
 }
+*/
 
 
 // MOBILE & TABLET NAV MENU
