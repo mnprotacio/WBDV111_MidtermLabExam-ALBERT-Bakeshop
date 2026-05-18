@@ -47,6 +47,7 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach(el => observer.observe(el));
 
+
 //hamburger
 function toggleMenu() {
   document.querySelector(".hamburgerdrawer").classList.toggle("open");
