@@ -4,158 +4,240 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Home | Albert's Bakeshop</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="icon" href="nav-logo.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="ab-logo.png">
   <link rel="stylesheet" href="style.css" />
 </head>
- 
-<body class="homepage">
- 
+
+<body>
+
+  <!-- NAV -->
   <header>
-
-    <nav class="nav">
-
+    <nav>
       <a href="index.html" class="navlogo">
-        <img src="nav-logo.png" alt="Albert's Bakeshop Logo" />
+        <img src="ab-logo.png" alt="Albert's Bakeshop Logo" />
       </a>
 
       <ul class="navlinks">
-        <li><a href="index.html">Home</a></li>
-        <li class="nav-dropdown">
-          <a href="index.html#menu">Menu</a>
-          <ul class="dropdown-menu">
-            <li><a href="gallery.html">All Cakes</a></li>
-          </ul>
-        </li>
-        <li><a href="about-us.html">About</a></li>
-        <li><a href="contact-us.html">Contact</a></li>
-      </ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#menu">Cakes</a></li>
+                <li><a href="gallery.html">Shop</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="contact-us.html" class="nav-cta">Contact Us</a></li>
+            </ul>
 
-      <div class="nav-spacer"></div>
-
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <!--MENU HAMBURGER FOR MOBILE AND TABLET-->
+            <div class="hamburger" onclick="toggleDrawer()">
+                ☰
+            </div>
     </nav>
-
   </header>
- 
-  <div class="hamburgerdrawer">
 
-    <span class="drawer-close" onclick="toggleMenu()">✕</span>
-    
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-overlay" id="overlay" onclick="toggleDrawer()"></div>
+  <div class="mobile-drawer" id="drawer">
+    <button class="drawer-close" onclick="toggleDrawer()">✕</button>
     <ul>
-      <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-      <li><a href="gallery.html" onclick="toggleMenu()">Menu</a></li>
-      <li><a href="about-us.html" onclick="toggleMenu()">About</a></li>
-      <li><a href="contact-us.html" onclick="toggleMenu()">Contact</a></li>
+      <li><a href="index.html" onclick="toggleDrawer()">Home</a></li>
+      <li><a href="gallery.html" onclick="toggleDrawer()">Shop</a></li>
+      <li><a href="about-us.html" onclick="toggleDrawer()">About</a></li>
+      <li><a href="contact-us.html" onclick="toggleDrawer()">Contact</a></li>
     </ul>
-
   </div>
 
-  <div class="overlay" onclick="toggleMenu()"></div>
- 
   <!-- HERO -->
-  <section class="herosection" id="home">
-    <div class="slide active" style="background-image: url('landingheroimage.jpg')"></div>
-    <div class="herocontent active">
-      <p class="herodesc">ORDER NOW!</p>
-      <h1 class="herotitle">Life's Too Short<br>For Boring Cakes</h1>
-      <a href="contact-us.html" class="herobtn">ORDER CUSTOMIZED CAKES</a>
-    </div>
-  </section>
- 
-  <!-- MENU -->
-  <section id="menu" class="menu fadedown">
-    <div class="menu-header">
-      <h2 class="menutitle">Explore Our Cakes</h2>
-      <p class="menudesc">Discover our delectable selection of cakes, perfect for any occasion.</p>
-    </div>
- 
-    <div class="menugrid">
-      <div class="menucontainer">
-        <img src="heart-minicake.jpg" alt="Heart Mini Cake">
-        <div class="menuiteminfo">
-          <h3 class="menuitemname">Valentine's Special</h3>
-          <p class="menuitemdesc">Handcrafted with love for every romantic occasion.</p>
-          <a href="gallery.html" class="menuitem-link">VISIT STORE →</a>
-        </div>
-      </div>
- 
-      <div class="menucontainer">
-        <img src="music-cake.png" alt="Music Cake">
-        <div class="menuiteminfo">
-          <h3 class="menuitemname">Disco Cake</h3>
-          <p class="menuitemdesc">A show-stopping celebration cake that brings the party to life.</p>
-          <a href="gallery.html" class="menuitem-link">VISIT STORE →</a>
-        </div>
-      </div>
- 
-      <div class="menucontainer">
-        <img src="crown-cake.jpg" alt="Crown Cake">
-        <div class="menuiteminfo">
-          <h3 class="menuitemname">Crowned Cake</h3>
-          <p class="menuitemdesc">Beautifully designed custom cakes for every occasion.</p>
-          <a href="gallery.html" class="menuitem-link">VISIT STORE →</a>
-        </div>
-      </div>
- 
-      <div class="menucontainer">
-        <img src="blueyandbingo.jpg" alt="Bluey with Bingo">
-        <div class="menuiteminfo">
-          <h3 class="menuitemname">Bluey with Bingo</h3>
-          <p class="menuitemdesc">Bring the beloved characters to life on your celebration cake.</p>
-          <a href="gallery.html" class="menuitem-link">VISIT STORE →</a>
-        </div>
-      </div>
-    </div>
- 
-    <a href="gallery.html" class="menu-btn">View More</a>
-  </section>
- 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footercontainer">
-      <div class="footerprofile">
-        <div class="footerlogo">
-          <img src="logo-footer.png" alt="Albert's Bakeshop Logo" />
-        </div>
-      </div>
-      <div class="footerlinks">
-        <div class="footercol">
-          <h4>QUICK LINKS</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gallery.html">Our Products</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footercol">
-          <h4>INFORMATION</h4>
-          <ul>
-            <li><p>albertsbakeshop@example.com</p></li>
-            <li><p>09273748404</p></li>
-            <li><p>Mondays to Sundays<br>9:00 AM to 9:00 PM</p></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footersocials">
-        <h4>OUR SOCIALS</h4>
-        <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank" aria-label="Facebook">
-          <img src="facebook.png" alt="Facebook">
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Life's Too Short<br>
+        For <em>Boring</em> Cakes
+      </h1>
+      <div class="hero-actions">
+        <a href="contact-us.html" class="btn-primary">
+          Order Customized Cakes
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </a>
+        <a href="index.html#menu" class="btn-ghost">View Our Menu</a>
       </div>
     </div>
-    <div class="footercopyright">
-      <p>© 2024 Albert's Bakeshop. All rights reserved.</p>
+
+
+  </section>
+
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="section-header reveal">
+      <h2 class="section-title">Our Featured Cakes</h2>
+      <p class="section-sub">Discover our delectable selection, crafted for every occasion and every story worth
+        celebrating.</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card reveal" style="transition-delay: 0.05s">
+        <div class="card-img-wrap">
+          <img src="heart-minicake.jpg" alt="Valentine's Special Cake">
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Valentine's Special</h3>
+          <p class="card-desc">Handcrafted with love for every romantic occasion.</p>
+          <a href="gallery.html" class="card-link">
+            Visit Store
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" style="transition-delay: 0.12s">
+        <div class="card-img-wrap">
+          <img src="music-cake.png" alt="Disco Cake">
+          <span class="card-badge">Celebration</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Disco Cake</h3>
+          <p class="card-desc">A show-stopping celebration cake that brings the party to life.</p>
+          <a href="gallery.html" class="card-link">
+            Visit Store
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" style="transition-delay: 0.19s">
+        <div class="card-img-wrap">
+          <img src="crown-cake.jpg" alt="Crowned Cake">
+          <span class="card-badge">Signature</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Crowned Cake</h3>
+          <p class="card-desc">Beautifully designed custom cakes for every occasion.</p>
+          <a href="gallery.html" class="card-link">
+            Visit Store
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="menu-card reveal" style="transition-delay: 0.26s">
+        <div class="card-img-wrap">
+          <img src="blueyandbingo.jpg" alt="Bluey with Bingo">
+          <span class="card-badge">Character</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-name">Bluey with Bingo</h3>
+          <p class="card-desc">Bring beloved characters to life on your celebration cake.</p>
+          <a href="gallery.html" class="card-link">
+            Visit Store
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-cta-wrap reveal">
+      <a href="gallery.html" class="btn-outline">
+        View All Cakes
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+
+        <a href="index.html" class="footerlogo">
+          <img src="ab-logo.png" alt="Albert's Bakeshop Logo" />
+        </a>
+
+        <div class="social-links">
+          <a href="https://www.facebook.com/ALBERTS.BAKESH0P" target="_blank" class="social-link" aria-label="Facebook">
+            <img src="facebook.png" alt="Albert's Bakeshop Logo" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Our Products</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <div class="footer-info-item">
+          <span class="footer-info-label">Email</span>
+          <span class="footer-info-val">albertsbakeshop@example.com</span>
+        </div>
+        <div class="footer-info-item">
+          <span class="footer-info-label">Phone</span>
+          <span class="footer-info-val">09273748404</span>
+        </div>
+        <div class="footer-info-item">
+          <span class="footer-info-label">Hours</span>
+          <span class="footer-info-val">Mon – Sun<br>9:00 AM – 9:00 PM</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Order</h5>
+        <ul>
+          <li><a href="contact-us.html">Custom Cakes</a></li>
+          <li><a href="gallery.html">Birthday Cakes</a></li>
+          <li><a href="gallery.html">Character Cakes</a></li>
+          <li><a href="gallery.html">Special Events</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 Albert's Bakeshop. All rights reserved.</p>
     </div>
   </footer>
- 
-  <script src="script.js"></script>
+
+  <script>//REVEAL ITEMS
+    function toggleDrawer() {
+      document.getElementById('drawer').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('open');
+    }
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));</script>
 </body>
+
 </html>
