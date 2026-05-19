@@ -711,13 +711,49 @@ footer {
   }
 
   .footer-top {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 
-  footer {
-    padding: 60px 40px 0;
-  }
+    footer {
+        padding: 50px 24px 0;
+        text-align: center;
+    }
+
+    .footerlogo img {
+        width: 150px;
+    }
+
+    .footer-col h5 {
+        font-size: 13px;
+        letter-spacing: 0.22em;
+    }
+
+    .footer-col ul li a {
+        font-size: 16px;
+    }
+
+    .footer-info-label {
+        font-size: 11px;
+        margin-top: 10px;
+    }
+
+    .footer-info-val {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
