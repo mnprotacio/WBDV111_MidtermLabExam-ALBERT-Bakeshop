@@ -39,14 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // =============================
   phone.addEventListener("input", function () {
 
+    // Strip everything except digits
     let numbers = this.value.replace(/[^0-9]/g, "");
 
-    if (numbers.length > 0 && !numbers.startsWith("09")) {
-      numbers = "09" + numbers.replace(/^0+/, "");
-    }
-
+    // Cap at 11 digits
     numbers = numbers.slice(0, 11);
 
+    // Build formatted string progressively
     let formatted = "";
 
     if (numbers.length > 0)
@@ -150,8 +149,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // =============================
   // RESET VALIDATION ON INPUT
+  // NOTE: name and phone are excluded here because they each have
+  // their own dedicated input listeners above. Adding them here
+  // would stack a second listener and cause interference.
   // =============================
-  [name, email, phone, subject, message].forEach(input => {
+  [email, subject, message].forEach(input => {
 
     input.addEventListener("input", () => {
       input.setCustomValidity("");
@@ -217,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
 
       status.textContent =
-        "Message sent successfully! We’ll get back to you shortly.";
+        "Message sent successfully! We'll get back to you shortly.";
 
       status.className = "success";
 
